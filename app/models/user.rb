@@ -3,7 +3,10 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  def authenticate(password)
-    self.authenticate(password)
+  before_create :generate_token
+
+  private
+  def generate_token
+    self.token = SecureRandom.hex(20)
   end
 end
