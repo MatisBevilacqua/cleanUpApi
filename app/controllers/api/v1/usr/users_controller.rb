@@ -1,4 +1,8 @@
-class Api::V1::Cmts::StarsController < ApplicationController
+class Api::V1::Usr::UsersController < ApplicationController
+  def show
+    @user = UsersPros.find(params[:id])
+    render json: { message: @user }, status: :ok
+  end
 
   def create
     @user = User.find_by(token: request.headers["Authorization"].split(" ").last)
