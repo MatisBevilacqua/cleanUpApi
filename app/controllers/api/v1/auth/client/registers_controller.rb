@@ -1,4 +1,4 @@
-class Api::V1::Auth::RegistersController < ApplicationController
+class Api::V1::Auth::Client::RegistersController < ApplicationController
   def new
     @user = User.new
     render json: @user, status: :ok
