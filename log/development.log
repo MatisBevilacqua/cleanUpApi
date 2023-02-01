@@ -49530,3 +49530,795 @@ No template found for Api::V1::Test::TestsController#index, rendering head :no_c
 Completed 204 No Content in 175ms (ActiveRecord: 101.0ms | Allocations: 5507)
 
 
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:13:19 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 2ms (Allocations: 836)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:8:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:18:16 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Allocations: 478)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:18:17 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Allocations: 441)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:18:18 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (Allocations: 441)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:18:18 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (Allocations: 441)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:18:47 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 476)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:18:47 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 478)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:19:04 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 880)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:8:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:19:05 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 886)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:8:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:19:18 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 471)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:7:in `authenticate_user'
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:19:45 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 880)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:19:51 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 880)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:22:02 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 880)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:22:02 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 2ms (Allocations: 886)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:22:03 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 886)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:24:52 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 880)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:24:53 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 2ms (Allocations: 886)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:24:53 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 1ms (Allocations: 886)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:25:38 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = 'invité' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+  [1m[36mUsersPros Load (16.4ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = 'invité' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:15:in `authenticate_user'
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 50.9ms | Allocations: 3380)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:19:in `authenticate_user'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:25:39 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = 'invité' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+  [1m[36mUsersPros Load (18.0ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = 'invité' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:15:in `authenticate_user'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 35.8ms | Allocations: 1360)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:19:in `authenticate_user'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:25:49 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+  [1m[36mUsersPros Load (16.4ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:15:in `authenticate_user'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 33.0ms | Allocations: 1308)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:19:in `authenticate_user'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:26:02 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+  [1m[36mUsersPros Load (17.2ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 72.1ms | Allocations: 3736)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:17:in `authenticate_user'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:26:08 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authenticate_user'
+  [1m[36mUsersPros Load (15.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_user'
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 71.3ms | Allocations: 3735)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:16:in `authenticate_user'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:26:09 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authenticate_user'
+  [1m[36mUsersPros Load (14.8ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `authenticate_user'
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 31.1ms | Allocations: 1362)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:16:in `authenticate_user'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:26:17 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+  [1m[36mUsersPros Load (16.3ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/sessions_controller.rb:3:in `create'
+Completed 201 Created in 416ms (Views: 0.1ms | ActiveRecord: 124.0ms | Allocations: 5731)
+
+
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:27:13 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+  [1m[36mUsersPros Load (17.1ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/sessions_controller.rb:3:in `create'
+Completed 201 Created in 381ms (Views: 0.2ms | ActiveRecord: 67.7ms | Allocations: 3049)
+
+
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:27:16 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+  [1m[36mUsersPros Load (17.1ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/sessions_controller.rb:3:in `create'
+Completed 201 Created in 358ms (Views: 0.2ms | ActiveRecord: 51.8ms | Allocations: 1678)
+
+
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:27:23 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+  [1m[36mUsersPros Load (16.4ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e797178eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:13:in `authenticate_user'
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 55ms (ActiveRecord: 33.9ms | Allocations: 1460)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/api/v1/auth/client/sessions_controller.rb:15:in `auth_params'
+app/controllers/api/v1/auth/client/sessions_controller.rb:3:in `create'
+Started POST "/api/v1/auth/pro/registers/" for 127.0.0.1 at 2023-02-01 11:27:38 +0100
+Processing by Api::V1::Auth::Pro::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 837)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 11:28:56 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (39.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/api/v1/test/tests_controller.rb:13:in `authenticate_user'
+  [1m[36mUsersPros Load (15.3ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/api/v1/test/tests_controller.rb:15:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 157ms (ActiveRecord: 130.7ms | Allocations: 5021)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 11:29:23 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (19.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/api/v1/test/tests_controller.rb:13:in `authenticate_user'
+  [1m[36mUsersPros Load (15.6ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/api/v1/test/tests_controller.rb:15:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 133ms (ActiveRecord: 107.8ms | Allocations: 4959)
+
+
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-01 11:29:27 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mUser Exists? (15.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+Completed 409 Conflict in 436ms (Views: 0.3ms | ActiveRecord: 118.8ms | Allocations: 5151)
+
+
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:29:31 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/sessions_controller.rb:3:in `create'
+Completed 201 Created in 321ms (Views: 0.2ms | ActiveRecord: 16.6ms | Allocations: 779)
+
+
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:29:53 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 560)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/api/v1/auth/client/sessions_controller.rb:15:in `auth_params'
+app/controllers/api/v1/auth/client/sessions_controller.rb:3:in `create'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-01 11:29:59 +0100
+Processing by Api::V1::Auth::Client::SessionsController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/sessions_controller.rb:3:in `create'
+Completed 201 Created in 293ms (Views: 0.1ms | ActiveRecord: 16.8ms | Allocations: 762)
+
+
+Started POST "/api/v1/auth/pro/registers/" for 127.0.0.1 at 2023-02-01 11:30:12 +0100
+Processing by Api::V1::Auth::Pro::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUsersPros Load (19.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:13:in `create'
+  [1m[36mUsersPros Exists? (15.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users_pros` WHERE `users_pros`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:13:in `create'
+Completed 409 Conflict in 354ms (Views: 0.3ms | ActiveRecord: 66.5ms | Allocations: 3636)
+
+
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 11:30:16 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsersPros Load (37.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (61.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 250ms (Views: 0.5ms | ActiveRecord: 202.5ms | Allocations: 3321)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 11:30:43 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/api/v1/test/tests_controller.rb:13:in `authenticate_user'
+  [1m[36mUsersPros Load (19.1ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/api/v1/test/tests_controller.rb:15:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 56ms (ActiveRecord: 35.6ms | Allocations: 1103)
+
+
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 11:31:46 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsersPros Load (16.0ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (17.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 154ms (Views: 0.6ms | ActiveRecord: 126.0ms | Allocations: 6021)
+
+
+Started POST "/api/v1/user/pro/3/comments/" for ::1 at 2023-02-01 11:31:48 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"3"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (15.0ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', 'Enio', 3)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+Completed 201 Created in 137ms (Views: 0.9ms | ActiveRecord: 104.9ms | Allocations: 4931)
+
+
+Started POST "/api/v1/user/pro/3/comments/" for ::1 at 2023-02-01 11:32:06 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"3"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '5a53fd9edee684f408572dbdaf1faa9f6562a2d1' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (15.2ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', 'matis5', 3)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+Completed 201 Created in 100ms (Views: 0.5ms | ActiveRecord: 67.3ms | Allocations: 2362)
+
+
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 11:32:31 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsersPros Load (18.0ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (14.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 52ms (Views: 0.4ms | ActiveRecord: 32.9ms | Allocations: 1201)
+
+
