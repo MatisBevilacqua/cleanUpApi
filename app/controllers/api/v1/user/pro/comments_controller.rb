@@ -1,4 +1,4 @@
-class Api::V1::Profil::CommentsController < ApplicationController
+class Api::V1::User::Pro::CommentsController < ApplicationController
 
   def create
     comment = Comment.new(comment_params)

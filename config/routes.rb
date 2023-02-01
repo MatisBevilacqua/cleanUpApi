@@ -12,24 +12,21 @@ Rails.application.routes.draw do
 					resources :registers
 				end
 			end
-		end
-	end
 
-	namespace :api do
-		namespace :v1 do
-		  namespace :profil do
-			post '/:id/comments', to: 'comments#create', as: :create_comment
-      		get '/:id/comments/:id', to: 'comments#show', as: :show_comment
-			get 'comments/index/:user_id', to: 'comments#index', as: 'comments_index'
-			#resources :comments
-		  end
+			namespace :user do
+				namespace :pro do
+					post '/:id/comments', to: 'comments#create', as: :create_comment
+					get '/users/:id', to: 'users#show', as: :show_user
+					#get 'comments/index/:user_id', to: 'comments#index', as: 'comments_index'
+				end
+			end
 		end
 	end
 
 	namespace :api do
 		namespace :v1 do
 		  namespace :test do
-				resources :tests
+			resources :tests
 		  end
 		end
 	end

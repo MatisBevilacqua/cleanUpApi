@@ -47334,3 +47334,2199 @@ puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.5) lib/puma/server.rb:443:in `process_client'
 puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/profil/comments/index/3" for ::1 at 2023-01-31 16:35:01 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::Profil::CommentsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/profil/comments/3" for ::1 at 2023-01-31 16:41:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/comments/3"):
+  
+Started GET "/api/v1/profil/comments/3" for ::1 at 2023-01-31 16:41:19 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/comments/3"):
+  
+Started GET "/api/v1/profil/comments/3" for ::1 at 2023-01-31 16:41:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/comments/3"):
+  
+Started GET "/api/v1/profil/1/comments/1" for ::1 at 2023-01-31 16:42:01 +0100
+Processing by Api::V1::Profil::CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (163.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (171.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (172.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in show'
+No template found for Api::V1::Profil::CommentsController#show, rendering head :no_content
+Completed 204 No Content in 1359ms (ActiveRecord: 666.8ms | Allocations: 5952)
+
+
+Started GET "/api/v1/profil/3/comments/1" for ::1 at 2023-01-31 16:42:36 +0100
+Processing by Api::V1::Profil::CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (55.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (63.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (56.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in show'
+No template found for Api::V1::Profil::CommentsController#show, rendering head :no_content
+Completed 204 No Content in 226ms (ActiveRecord: 175.3ms | Allocations: 1719)
+
+
+Started GET "/api/v1/profil/3/comments/1" for ::1 at 2023-01-31 16:42:53 +0100
+Processing by Api::V1::Profil::CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (38.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (38.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (44.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in show'
+No template found for Api::V1::Profil::CommentsController#show, rendering head :no_content
+Completed 204 No Content in 164ms (ActiveRecord: 121.5ms | Allocations: 1715)
+
+
+Started GET "/api/v1/profil/3/comments/" for ::1 at 2023-01-31 16:42:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/3/comments"):
+  
+Started GET "/api/v1/profil/3/comments/" for ::1 at 2023-01-31 16:42:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/3/comments"):
+  
+Started GET "/api/v1/profil/3/comments/1" for ::1 at 2023-01-31 16:43:02 +0100
+Processing by Api::V1::Profil::CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (48.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (45.8ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (44.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in show'
+No template found for Api::V1::Profil::CommentsController#show, rendering head :no_content
+Completed 204 No Content in 189ms (ActiveRecord: 138.5ms | Allocations: 1714)
+
+
+Started GET "/api/v1/profil/3/comments/1" for ::1 at 2023-01-31 16:43:52 +0100
+Processing by Api::V1::Profil::CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (17.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in show'
+No template found for Api::V1::Profil::CommentsController#show, rendering head :no_content
+Completed 204 No Content in 172ms (ActiveRecord: 144.8ms | Allocations: 6226)
+
+
+Started GET "/api/v1/profil/4/comments/1" for ::1 at 2023-01-31 16:44:36 +0100
+Processing by Api::V1::Profil::CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (17.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 4)[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in show'
+No template found for Api::V1::Profil::CommentsController#show, rendering head :no_content
+Completed 204 No Content in 72ms (ActiveRecord: 53.4ms | Allocations: 1838)
+
+
+Started GET "/api/v1/profil/4/comments/" for ::1 at 2023-01-31 16:44:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/4/comments"):
+  
+Started GET "/api/v1/profil/4/comments/1" for ::1 at 2023-01-31 16:44:47 +0100
+Processing by Api::V1::Profil::CommentsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (15.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 4)[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in show'
+No template found for Api::V1::Profil::CommentsController#show, rendering head :no_content
+Completed 204 No Content in 74ms (ActiveRecord: 52.5ms | Allocations: 1816)
+
+
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:45:34 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::Profil::CommentsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/profil/comments/index/2" for ::1 at 2023-01-31 16:45:35 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::Profil::CommentsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:45:36 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::Profil::CommentsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:45:37 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::Profil::CommentsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:45:38 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::Profil::CommentsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:45:46 +0100
+Processing by Api::V1::Profil::CommentsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (16.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 4)[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in index'
+No template found for Api::V1::Profil::CommentsController#index, rendering head :no_content
+Completed 204 No Content in 174ms (ActiveRecord: 145.4ms | Allocations: 6259)
+
+
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:45:51 +0100
+Processing by Api::V1::Profil::CommentsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (16.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 4)[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in index'
+No template found for Api::V1::Profil::CommentsController#index, rendering head :no_content
+Completed 204 No Content in 72ms (ActiveRecord: 52.3ms | Allocations: 1817)
+
+
+Started GET "/api/v1/profil/comments/index/2" for ::1 at 2023-01-31 16:45:55 +0100
+Processing by Api::V1::Profil::CommentsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (17.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 4)[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in index'
+No template found for Api::V1::Profil::CommentsController#index, rendering head :no_content
+Completed 204 No Content in 67ms (ActiveRecord: 50.6ms | Allocations: 1817)
+
+
+Started GET "/api/v1/profil/comments/index/7" for ::1 at 2023-01-31 16:45:58 +0100
+Processing by Api::V1::Profil::CommentsController#index as */*
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (16.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 4)[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in index'
+No template found for Api::V1::Profil::CommentsController#index, rendering head :no_content
+Completed 204 No Content in 74ms (ActiveRecord: 52.0ms | Allocations: 1816)
+
+
+Started GET "/api/v1/profil/comments/index/" for ::1 at 2023-01-31 16:46:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/comments/index"):
+  
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:46:07 +0100
+Processing by Api::V1::Profil::CommentsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mComment Load (17.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:14:in `map'
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (3, 4)[0m
+  ↳ app/controllers/api/v1/profil/comments_controller.rb:18:in `block in index'
+No template found for Api::V1::Profil::CommentsController#index, rendering head :no_content
+Completed 204 No Content in 72ms (ActiveRecord: 53.7ms | Allocations: 1815)
+
+
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-01-31 16:47:29 +0100
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::Profil::CommentsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/profil/3/comments/" for ::1 at 2023-02-01 09:57:45 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (192.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profil/3/comments"):
+  
+Started POST "/api/v1/user/pro/3/comments/" for ::1 at 2023-02-01 09:58:02 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"3"}
+  [1m[36mUser Load (50.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+  [1m[36mComment Create (13.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', 'Enio', 3)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+Completed 201 Created in 382ms (Views: 0.4ms | ActiveRecord: 298.0ms | Allocations: 38329)
+
+
+Started GET "/api/v1/profil/comments/index/1" for ::1 at 2023-02-01 09:58:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/comments/index/1"):
+  
+Started GET "/api/v1/profil/users/1" for ::1 at 2023-02-01 10:00:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/users/1"):
+  
+Started GET "/api/v1/profil/users/1" for ::1 at 2023-02-01 10:00:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/profil/users/1"):
+  
+Started GET "/api/v1/user/users/1" for ::1 at 2023-02-01 10:00:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/users/1"):
+  
+Started GET "/api/v1/user/users/1" for ::1 at 2023-02-01 10:00:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/users/1"):
+  
+Started GET "/api/v1/user/users/1" for ::1 at 2023-02-01 10:00:53 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/users/1"):
+  
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 10:01:06 +0100
+  
+Zeitwerk::NameError (expected file /Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb to define constant Api::V1::User::Pro::UsersController, but didn't):
+  
+zeitwerk (2.6.6) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.2) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.2) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.2) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 10:01:54 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 404 Not Found in 110ms (ActiveRecord: 88.7ms | Allocations: 4694)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 10:01:55 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 404 Not Found in 53ms (ActiveRecord: 35.0ms | Allocations: 1401)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:02:05 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+No template found for Api::V1::User::Pro::UsersController#show, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 35.5ms | Allocations: 1318)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:02:51 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (15.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 89.0ms | Allocations: 7316)
+
+
+  
+NameError (undefined local variable or method `ok' for #<Api::V1::User::Pro::UsersController:0x0000000002cb50>):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:03:03 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 200 OK in 113ms (Views: 0.4ms | ActiveRecord: 91.0ms | Allocations: 4464)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:03:18 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 200 OK in 112ms (Views: 0.4ms | ActiveRecord: 89.8ms | Allocations: 4468)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:06:53 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 90.4ms | Allocations: 6498)
+
+
+  
+NameError (uninitialized constant Api::V1::User::Pro::UsersController::Comments):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:06:58 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (20.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 92.7ms | Allocations: 7648)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<Api::V1::User::Pro::UsersController:0x00000000051040>
+Did you mean?  user):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:07:06 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 89.0ms | Allocations: 7700)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<Api::V1::User::Pro::UsersController:0x0000000005a500>
+Did you mean?  user):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:07:15 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 86.2ms | Allocations: 7624)
+
+
+  
+NameError (undefined local variable or method `profile_id' for #<Api::V1::User::Pro::UsersController:0x00000000063808>):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:07:27 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 112.0ms | Allocations: 7615)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Comment' to association named 'user'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:12:27 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (15.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 88.5ms | Allocations: 7692)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::User::Pro::UsersController:0x00000000075f58>
+Did you mean?  @current_user):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:12:28 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 30.3ms | Allocations: 4097)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<Api::V1::User::Pro::UsersController:0x00000000076278>
+Did you mean?  @current_user):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:12:39 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 91.2ms | Allocations: 7200)
+
+
+  
+NoMethodError (undefined method `profile_id' for #<User id: 10, name: "Aiello", username: "Enio", email: "enio@gmail.com", password_digest: [FILTERED], token: [FILTERED]>):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:12:41 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 33.2ms | Allocations: 3468)
+
+
+  
+NoMethodError (undefined method `profile_id' for #<User id: 10, name: "Aiello", username: "Enio", email: "enio@gmail.com", password_digest: [FILTERED], token: [FILTERED]>):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/10" for ::1 at 2023-02-01 10:13:46 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 35.0ms | Allocations: 3462)
+
+
+  
+NoMethodError (undefined method `profile_id' for #<User id: 10, name: "Aiello", username: "Enio", email: "enio@gmail.com", password_digest: [FILTERED], token: [FILTERED]>):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/8" for ::1 at 2023-02-01 10:13:50 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 404 Not Found in 56ms (ActiveRecord: 34.5ms | Allocations: 1393)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=8):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:13:52 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 34.4ms | Allocations: 3462)
+
+
+  
+NoMethodError (undefined method `profile_id' for #<User id: 10, name: "Aiello", username: "Enio", email: "enio@gmail.com", password_digest: [FILTERED], token: [FILTERED]>):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:13:58 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 113ms (Views: 0.3ms | ActiveRecord: 90.4ms | Allocations: 5293)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:14:11 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (18.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 200 OK in 119ms (Views: 0.4ms | ActiveRecord: 95.8ms | Allocations: 4456)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:15:23 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (18.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 200 OK in 144ms (Views: 0.4ms | ActiveRecord: 119.4ms | Allocations: 5154)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:15:31 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `puts'
+Completed 200 OK in 143ms (Views: 0.3ms | ActiveRecord: 123.5ms | Allocations: 5626)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:15:51 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (26.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `puts'
+Completed 200 OK in 113ms (Views: 0.2ms | ActiveRecord: 89.5ms | Allocations: 2693)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:16:00 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (23.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 122.2ms | Allocations: 8832)
+
+
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `content' for #<ActiveRecord::Relation [#<Comment id: 1, content: "This is a test comment.", send: "Enio", profile_id: 9>, #<Comment id: 2, content: "This is a test comment.", send: "Enio", profile_id: 9>]>
+Did you mean?  connection):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:16:17 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `puts'
+Completed 200 OK in 181ms (Views: 0.5ms | ActiveRecord: 150.0ms | Allocations: 6677)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:17:55 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments`[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `puts'
+Completed 200 OK in 167ms (Views: 0.4ms | ActiveRecord: 140.0ms | Allocations: 6648)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:18:09 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (18.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (18.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `puts'
+Completed 200 OK in 174ms (Views: 0.4ms | ActiveRecord: 147.0ms | Allocations: 6853)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:18:15 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (20.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (84.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 111.8ms | Allocations: 8903)
+
+
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation [#<Comment id: 1, content: "This is a test comment.", send: "Enio", profile_id: 9>, #<Comment id: 2, content: "This is a test comment.", send: "Enio", profile_id: 9>]>
+Did you mean?  ids):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:18:22 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 109.9ms | Allocations: 8834)
+
+
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `profile_id' for #<ActiveRecord::Relation [#<Comment id: 1, content: "This is a test comment.", send: "Enio", profile_id: 9>, #<Comment id: 2, content: "This is a test comment.", send: "Enio", profile_id: 9>]>):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:18:32 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (14.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `puts'
+Completed 200 OK in 161ms (Views: 0.3ms | ActiveRecord: 137.2ms | Allocations: 6613)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:20:27 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (18.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 146.6ms | Allocations: 9829)
+
+
+  
+NameError (undefined local variable or method `comments' for #<Api::V1::User::Pro::UsersController:0x000000000eee08>
+Did you mean?  comment):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:20:37 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (19.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Completed 200 OK in 179ms (Views: 0.5ms | ActiveRecord: 151.1ms | Allocations: 6995)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:21:00 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (17.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Completed 200 OK in 70ms (Views: 0.5ms | ActiveRecord: 50.9ms | Allocations: 1625)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:21:28 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 141.9ms | Allocations: 8391)
+
+
+  
+NoMethodError (undefined method `each' for "1":String):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:21:49 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (18.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (18.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 53.8ms | Allocations: 3094)
+
+
+  
+NoMethodError (undefined method `each' for "zez":String):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:21:59 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (21.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (38.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (59.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 318.1ms | Allocations: 8429)
+
+
+  
+NoMethodError (undefined method `each' for "zez":String):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:22:00 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (18.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:4:in `show'
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 50.6ms | Allocations: 3094)
+
+
+  
+NoMethodError (undefined method `each' for "zez":String):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:22:56 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (65.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 211.3ms | Allocations: 7994)
+
+
+  
+NameError (undefined local variable or method `comment' for #<Api::V1::User::Pro::UsersController:0x00000000114bf8>
+Did you mean?  comments
+               content):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:23:09 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (22.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 177ms (Views: 0.4ms | ActiveRecord: 150.1ms | Allocations: 6635)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:23:30 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (18.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 51.2ms | Allocations: 1721)
+
+
+Started POST "/api/v1/user/pro/3/comments/" for ::1 at 2023-02-01 10:26:24 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"3"}
+  [1m[36mUser Load (15.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+  [1m[36mComment Create (15.0ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', 'Enio', 3)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+Completed 201 Created in 181ms (Views: 0.3ms | ActiveRecord: 156.6ms | Allocations: 6284)
+
+
+Started POST "/api/v1/user/pro/3/comments/" for ::1 at 2023-02-01 10:26:38 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"3"}
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+  [1m[36mComment Create (16.0ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', 'Enio', 3)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:5:in `create'
+Completed 201 Created in 183ms (Views: 0.3ms | ActiveRecord: 156.5ms | Allocations: 6281)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:26:44 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (18.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 500 Internal Server Error in 74ms (Views: 0.3ms | ActiveRecord: 52.7ms | Allocations: 2704)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `block in show'
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:26:51 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (17.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 500 Internal Server Error in 170ms (Views: 0.2ms | ActiveRecord: 142.4ms | Allocations: 6964)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `block in show'
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:26:52 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (14.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 500 Internal Server Error in 80ms (Views: 0.2ms | ActiveRecord: 49.6ms | Allocations: 2103)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:6:in `block in show'
+app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:27:42 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (17.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 167ms (Views: 0.4ms | ActiveRecord: 140.0ms | Allocations: 6672)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:27:58 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (20.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 172ms (Views: 0.3ms | ActiveRecord: 144.7ms | Allocations: 6540)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:10 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (18.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 178ms (Views: 0.3ms | ActiveRecord: 150.7ms | Allocations: 6564)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:11 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (19.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (17.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 72ms (Views: 0.1ms | ActiveRecord: 53.5ms | Allocations: 1661)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:11 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (19.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 72ms (Views: 0.1ms | ActiveRecord: 54.1ms | Allocations: 1656)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:18 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 71ms (Views: 0.3ms | ActiveRecord: 50.4ms | Allocations: 1656)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:24 +0100
+  
+SyntaxError (/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected local variable or method, expecting '}'
+...json: { message: user.name user.username }, status: :ok 
+...                           ^~~~
+/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+...sage: user.name user.username }, status: :ok 
+...                              ^
+):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:27 +0100
+  
+SyntaxError (/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting =>
+...age: user.name, user.username }, status: :ok 
+...                              ^
+):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting =>
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting =>
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting =>
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:44 +0100
+  
+SyntaxError (/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+...on: { name: user.name username: user.username }, status: :ok 
+...                      ^~~~~~~~~
+/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+....name username: user.username }, status: :ok 
+...                              ^
+):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:45 +0100
+  
+SyntaxError (/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+...on: { name: user.name username: user.username }, status: :ok 
+...                      ^~~~~~~~~
+/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+....name username: user.username }, status: :ok 
+...                              ^
+):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected label, expecting '}'
+app/controllers/api/v1/user/pro/users_controller.rb:8: syntax error, unexpected '}', expecting `end'
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-01 10:28:51 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUser Load (20.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (16.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 180ms (Views: 0.6ms | ActiveRecord: 145.2ms | Allocations: 6612)
+
+
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 10:30:54 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (17.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 72.6ms | Allocations: 5574)
+
+
+  
+NameError (uninitialized constant Api::V1::User::Pro::UsersController::UsersPro
+Did you mean?  UsersPros):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-01 10:31:11 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (16.8ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (46.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 322ms (Views: 0.5ms | ActiveRecord: 275.8ms | Allocations: 8918)
+
+
+Started GET "/api/v1/test/tests/index" for ::1 at 2023-02-01 10:32:13 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::Test::TestsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:32:40 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 944)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:8:in `authenticate_user'
+Started GET "/api/v1/test/tests/inde" for ::1 at 2023-02-01 10:32:44 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::Test::TestsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/test/tests/inde" for ::1 at 2023-02-01 10:33:09 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::Test::TestsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:33:12 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 111ms (ActiveRecord: 70.7ms | Allocations: 5478)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:33:41 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 200 OK in 96ms (Views: 0.2ms | ActiveRecord: 74.9ms | Allocations: 3441)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:34:32 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 38.8ms | Allocations: 2650)
+
+
+  
+NoMethodError (undefined method `token' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:35:12 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 16.8ms | Allocations: 1358)
+
+
+  
+NoMethodError (undefined method `token' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:35:12 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 16.3ms | Allocations: 1358)
+
+
+  
+NoMethodError (undefined method `token' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:35:13 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (18.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 18.8ms | Allocations: 1356)
+
+
+  
+NoMethodError (undefined method `token' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:35:13 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 16.8ms | Allocations: 1356)
+
+
+  
+NoMethodError (undefined method `token' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:35:13 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 16.8ms | Allocations: 1359)
+
+
+  
+NoMethodError (undefined method `token' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:35:35 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (166.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '5a53fd9edee684f408572dbdaf1faa9f6562a2d1' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 200 OK in 737ms (Views: 0.5ms | ActiveRecord: 542.9ms | Allocations: 2143)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:37:11 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '5a53fd9edee684f408572dbdaf1faa9f6562a2d1' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 200 OK in 91ms (Views: 0.2ms | ActiveRecord: 71.7ms | Allocations: 3417)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:37:31 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (18.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 18.1ms | Allocations: 1367)
+
+
+  
+NoMethodError (undefined method `token' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:37:50 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 38.2ms | Allocations: 2646)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:5:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:37:55 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 41.3ms | Allocations: 1969)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:39:48 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 39.0ms | Allocations: 3992)
+
+
+  
+NameError (uninitialized constant ApplicationController::UsersPro
+Did you mean?  UsersPros):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:40:00 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 38.7ms | Allocations: 3991)
+
+
+  
+NameError (uninitialized constant ApplicationController::UsersPro
+Did you mean?  UsersPros):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:41:51 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 37.9ms | Allocations: 3990)
+
+
+  
+NameError (uninitialized constant ApplicationController::UsersPro
+Did you mean?  UsersPros):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:41:52 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 16.8ms | Allocations: 2702)
+
+
+  
+NameError (uninitialized constant ApplicationController::UsersPro
+Did you mean?  UsersPros):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:41:53 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (19.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 19.7ms | Allocations: 2702)
+
+
+  
+NameError (uninitialized constant ApplicationController::UsersPro
+Did you mean?  UsersPros):
+  
+app/controllers/application_controller.rb:10:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:42:03 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (16.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 129ms (ActiveRecord: 106.7ms | Allocations: 5018)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:42:25 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (18.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (16.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 51.4ms | Allocations: 2469)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:42:45 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (352.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (30.6ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 2064ms (ActiveRecord: 1865.4ms | Allocations: 4958)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:42:55 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (86.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 439ms (ActiveRecord: 348.9ms | Allocations: 3409)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:43:03 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUsersPros Load (108.8ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 329ms (ActiveRecord: 225.7ms | Allocations: 2014)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:45:24 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (18.0ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authenticate_user'
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 115.5ms | Allocations: 5666)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/application_controller.rb:11:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:45:33 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (17.3ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 142ms (ActiveRecord: 113.1ms | Allocations: 5020)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:48:20 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 92ms (ActiveRecord: 71.4ms | Allocations: 3413)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:48:31 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 92ms (ActiveRecord: 72.0ms | Allocations: 3437)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:48:50 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (15.4ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 97ms (ActiveRecord: 72.3ms | Allocations: 3571)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:49:13 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (18.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (16.6ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 35.2ms | Allocations: 1099)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:50:11 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (15.2ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 74.3ms | Allocations: 4253)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:51:16 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (17.0ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 78.7ms | Allocations: 4248)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:52:20 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (16.8ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 78.0ms | Allocations: 4247)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:52:21 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (20.7ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 38.0ms | Allocations: 2050)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:52:31 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (17.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (18.0ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 77.8ms | Allocations: 3826)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/api/v1/test/tests_controller.rb:4:in `index'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:52:54 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (19.0ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 135ms (ActiveRecord: 109.2ms | Allocations: 5021)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:53:24 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (16.8ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 133ms (ActiveRecord: 111.5ms | Allocations: 4961)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:53:32 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 894)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/application_controller.rb:8:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:53:48 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 459)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:54:00 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 457)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:54:01 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 457)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:54:01 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 457)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:9:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:55:03 +0100
+  
+SyntaxError (/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:55:04 +0100
+  
+SyntaxError (/Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/test/tests_controller.rb:6: syntax error, unexpected `end', expecting end-of-input
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:55:19 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (18.4ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 132ms (ActiveRecord: 107.7ms | Allocations: 5021)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:55:31 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 53ms (ActiveRecord: 32.1ms | Allocations: 2027)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:56:41 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 97ms (ActiveRecord: 77.2ms | Allocations: 3415)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:56:48 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (15.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` IS NULL LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 52.4ms | Allocations: 2638)
+
+
+  
+StandardError (Authentication failed: no user found for given token):
+  
+app/controllers/application_controller.rb:15:in `authenticate_user'
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:56:59 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (16.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 92ms (ActiveRecord: 72.5ms | Allocations: 3414)
+
+
+Started GET "/api/v1/test/tests/" for ::1 at 2023-02-01 10:59:11 +0100
+Processing by Api::V1::Test::TestsController#index as */*
+  [1m[36mUser Load (41.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:9:in `authenticate_user'
+  [1m[36mUsersPros Load (18.2ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '9d582d10c90ca01a16b4ed622223ddf73b94322e' LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:11:in `authenticate_user'
+No template found for Api::V1::Test::TestsController#index, rendering head :no_content
+Completed 204 No Content in 175ms (ActiveRecord: 101.0ms | Allocations: 5507)
+
+
