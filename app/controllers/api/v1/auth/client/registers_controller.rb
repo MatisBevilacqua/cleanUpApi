@@ -3,6 +3,7 @@ class Api::V1::Auth::Client::RegistersController < ApplicationController
     render json: @user, status: :ok
   end
 
+  #POST http://127.0.0.1:3000/api/v1/auth/client/sessions/
   def create
     @user = User.new(user_params)
     @user.role = 'client'

@@ -2,6 +2,7 @@ class Api::V1::User::CommentsController < ApplicationController
 
   before_action :authenticate_user
 
+  # POST http://localhost:3000/api/v1/user/1/comments/
   # Mettre un commentaire
   def create
     comment = Comment.new(comment_params)

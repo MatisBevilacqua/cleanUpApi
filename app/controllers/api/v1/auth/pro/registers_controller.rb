@@ -4,6 +4,7 @@ class Api::V1::Auth::Pro::RegistersController < ApplicationController
     render json: @user, status: :ok
   end
 
+  #POST http://127.0.0.1:3000/api/v1/auth/pro/registers/
   def create
     @user = User.new(user_params)
     @user.role = 'pro'

@@ -1,6 +1,7 @@
 class Api::V1::User::ChatsController < ApplicationController
   before_action :authenticate_user
 
+  # POST  http://localhost:3000/api/v1/user/1/chats/
   # Envoyer un message
   def create
     chat = Chat.new(chat_params)
@@ -11,6 +12,7 @@ class Api::V1::User::ChatsController < ApplicationController
     end
   end
 
+  # GET http://localhost:3000/api/v1/user/chats/index
   # Afficher les id de ce à qui nous avons envoyer un message
   def index
     user = @current_user

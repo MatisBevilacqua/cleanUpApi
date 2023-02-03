@@ -1,4 +1,6 @@
 class Api::V1::Auth::Client::SessionsController < ApplicationController
+
+  # POST http://127.0.0.1:3000/api/v1/auth/client/sessions/
   def create
     user = User.find_by(email: auth_params[:email])
     if user && user.authenticate(auth_params[:password])
