@@ -1,10 +1,10 @@
-class Api::V1::User::Pro::CommentsController < ApplicationController
+class Api::V1::User::CommentsController < ApplicationController
 
   before_action :authenticate_user
 
   def create
     comment = Comment.new(comment_params)
-    if comment.save 
+    if comment.save
       render json: { comment: comment }, status: :created
     else
       render json: { error: comment.errors }, status: :unprocessable_entity
@@ -12,10 +12,10 @@ class Api::V1::User::Pro::CommentsController < ApplicationController
   end
 
   private
-  
+
   def comment_params
     user = @current_user
-    send_info = user.username
+    send_info = user.id
     params.require(:comment).permit(:content).merge(profile_id: params[:id], send: send_info)
   end
 

@@ -5,8 +5,9 @@ class Api::V1::Auth::Pro::RegistersController < ApplicationController
   end
 
   def create
-    @user = UsersPros.new(user_params)
-    if UsersPros.find_by_email(@user.email)
+    @user = User.new(user_params)
+    @user.role = 'pro'
+    if User.find_by_email(@user.email)
       render json:{ error: "L'email existe déja"}, status: :conflict
     end
 
@@ -18,6 +19,6 @@ class Api::V1::Auth::Pro::RegistersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :username, :email, :password)
+    params.require(:user).permit(:name, :username, :email, :password, :role)
   end
 end

@@ -50322,3 +50322,2180 @@ Processing by Api::V1::User::Pro::UsersController#show as */*
 Completed 200 OK in 52ms (Views: 0.4ms | ActiveRecord: 32.9ms | Allocations: 1201)
 
 
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-02 12:07:17 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-02 12:07:26 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-02 12:07:40 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-02 12:07:43 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 12:07:50 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 12:08:05 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 12:08:20 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 12:09:44 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 12:10:00 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 12:10:30 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 12:10:55 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `public_send'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:656:in `new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:700:in `checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:679:in `try_to_checkout_new_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:640:in `acquire_connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:613:in `connection'
+activerecord (7.0.4.2) lib/active_record/migration.rb:608:in `build_watcher'
+activerecord (7.0.4.2) lib/active_record/migration.rb:590:in `block in call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/pro/registers/" for 127.0.0.1 at 2023-02-02 12:14:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (35.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::Pro::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUsersPros Load (45.4ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (31.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:13:in `create'
+  [1m[36mUsersPros Exists? (47.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users_pros` WHERE `users_pros`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (48.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:13:in `create'
+Completed 409 Conflict in 1077ms (Views: 1.2ms | ActiveRecord: 337.6ms | Allocations: 13081)
+
+
+Started GET "/api/v1/user/pro/users/9" for ::1 at 2023-02-02 12:15:08 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUsersPros Load (49.6ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Completed 404 Not Found in 95ms (ActiveRecord: 49.6ms | Allocations: 1534)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find UsersPros with 'id'=9):
+  
+app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-02 12:15:18 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsersPros Load (43.2ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (44.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 250ms (Views: 0.4ms | ActiveRecord: 169.4ms | Allocations: 4656)
+
+
+Started POST "/api/v1/profil/1/comments/" for ::1 at 2023-02-02 12:15:39 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profil/1/comments"):
+  
+Started POST "/api/v1/profil/1/comments/" for ::1 at 2023-02-02 12:16:00 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/profil/1/comments"):
+  
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 12:16:52 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 564)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/user/pro/comments_controller.rb:23:in `authenticate_user'
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 12:17:41 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (40.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+Completed 500 Internal Server Error in 498ms (ActiveRecord: 180.5ms | Allocations: 15158)
+
+
+  
+NoMethodError (undefined method `idz' for #<User id: 10, name: "Aiello", username: "Enio", email: "enio@gmail.com", password_digest: [FILTERED], token: [FILTERED]>):
+  
+app/controllers/api/v1/user/pro/comments_controller.rb:18:in `comment_params'
+app/controllers/api/v1/user/pro/comments_controller.rb:6:in `create'
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 12:17:51 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (52.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (26.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (43.8ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', '10', 1)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (29.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+Completed 201 Created in 468ms (Views: 0.6ms | ActiveRecord: 376.9ms | Allocations: 8016)
+
+
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 12:18:11 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (56.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mUsersPros Load (38.6ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:26:in `authenticate_user'
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 152.0ms | Allocations: 2682)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/user/pro/comments_controller.rb:18:in `comment_params'
+app/controllers/api/v1/user/pro/comments_controller.rb:6:in `create'
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 12:18:15 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (46.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (28.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (57.4ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', '10', 1)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (296.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+Completed 201 Created in 498ms (Views: 0.5ms | ActiveRecord: 429.6ms | Allocations: 2564)
+
+
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 13:41:32 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 32ms (Allocations: 960)
+
+
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 13:41:36 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 9ms (Allocations: 917)
+
+
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+Started POST "/api/v1/user/pro/1/comments/" for ::1 at 2023-02-02 13:41:58 +0100
+Processing by Api::V1::User::Pro::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1636.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (1634.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (1531.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', '10', 1)[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (814.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/pro/comments_controller.rb:7:in `create'
+Completed 201 Created in 17231ms (Views: 0.6ms | ActiveRecord: 7125.3ms | Allocations: 2717)
+
+
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-02 13:43:16 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsersPros Load (920.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (603.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 3563ms (Views: 0.4ms | ActiveRecord: 2446.1ms | Allocations: 3864)
+
+
+Started GET "/api/v1/user/pro/users/1" for ::1 at 2023-02-02 14:34:06 +0100
+Processing by Api::V1::User::Pro::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsersPros Load (41.9ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:3:in `show'
+  [1m[36mComment Load (59.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/pro/users_controller.rb:5:in `show'
+Completed 200 OK in 491ms (Views: 1.4ms | ActiveRecord: 184.2ms | Allocations: 1458)
+
+
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 14:34:40 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (39.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (40.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mUser Exists? (42.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (65.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+Completed 409 Conflict in 915ms (Views: 0.4ms | ActiveRecord: 186.6ms | Allocations: 3751)
+
+
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-02 14:35:47 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (61.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (45.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mUser Exists? (78.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (77.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+Completed 409 Conflict in 947ms (Views: 0.3ms | ActiveRecord: 262.5ms | Allocations: 3292)
+
+
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-03 09:34:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (98.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+NameError (uninitialized constant Api::V1::User::Pro):
+  
+app/controllers/api/v1/user/comments_controller.rb:1:in `<main>'
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-03 09:35:04 +0100
+Processing by Api::V1::User::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (432.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (220.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (71.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', '10', 1)[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (166.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:7:in `create'
+Completed 201 Created in 1995ms (Views: 2.9ms | ActiveRecord: 1495.9ms | Allocations: 15234)
+
+
+Started GET "/api/v1/user/users/1" for ::1 at 2023-02-03 09:35:12 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUsersPros Load (56.8ms)[0m  [1m[34mSELECT `users_pros`.* FROM `users_pros` WHERE `users_pros`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+  [1m[36mComment Load (85.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:5:in `show'
+Completed 200 OK in 452ms (Views: 0.7ms | ActiveRecord: 288.8ms | Allocations: 4928)
+
+
+  [1m[35m (154.1ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (153.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateChats (20230203084121)
+  [1m[35m (134.9ms)[0m  [1m[35mCREATE TABLE `chats` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `token_send` varchar(255), `token_receive` varchar(255), `message` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (145.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (133.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230203084121')[0m
+  [1m[36mTRANSACTION (351.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (52.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (95.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (381.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/user/1/chats/" for ::1 at 2023-02-03 09:54:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (82.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/1/chats"):
+  
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 09:54:36 +0100
+  
+SyntaxError (C:/Users/Mathis BEVILACQUA/Desktop/cleanUpApi/app/controllers/api/v1/user/chats_controller.rb:18: syntax error, unexpected local variable or method, expecting =>
+... send_token, :id_receive params[:id])
+...                         ^~~~~~
+):
+  
+app/controllers/api/v1/user/chats_controller.rb:18: syntax error, unexpected local variable or method, expecting =>
+app/controllers/api/v1/user/chats_controller.rb:18: syntax error, unexpected local variable or method, expecting =>
+app/controllers/api/v1/user/chats_controller.rb:18: syntax error, unexpected local variable or method, expecting =>
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 09:55:53 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 577)
+
+
+  
+NoMethodError (undefined method `split' for nil:NilClass):
+  
+app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 09:56:04 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1004.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:24:in `authenticate_user'
+Completed 500 Internal Server Error in 2860ms (ActiveRecord: 1944.3ms | Allocations: 6984)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'send_token' for Chat.):
+  
+app/controllers/api/v1/user/chats_controller.rb:5:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 09:56:49 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (243.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (408.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (296.6ms)[0m  [1m[32mINSERT INTO `chats` (`token_send`, `id_receive`, `message`) VALUES ('72a609aa4d95e7971785813eed6c185a2387eee8', NULL, 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (307.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 2832ms (Views: 0.5ms | ActiveRecord: 2424.2ms | Allocations: 7822)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 09:57:16 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (407.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (299.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (304.2ms)[0m  [1m[32mINSERT INTO `chats` (`token_send`, `id_receive`, `message`) VALUES ('72a609aa4d95e7971785813eed6c185a2387eee8', NULL, 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (408.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 2794ms (Views: 0.4ms | ActiveRecord: 2324.4ms | Allocations: 7346)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 09:57:51 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (278.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (212.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (90.3ms)[0m  [1m[32mINSERT INTO `chats` (`token_send`, `id_receive`, `message`) VALUES ('72a609aa4d95e7971785813eed6c185a2387eee8', '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (69.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 1987ms (Views: 0.3ms | ActiveRecord: 1568.3ms | Allocations: 7350)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:08:40 +0100
+  
+SyntaxError (C:/Users/Mathis BEVILACQUA/Desktop/cleanUpApi/app/controllers/api/v1/user/chats_controller.rb:11: syntax error, unexpected '(', expecting `end' or dummy end
+    puts @current_user(params[:id])
+                      ^
+):
+  
+app/controllers/api/v1/user/chats_controller.rb:11: syntax error, unexpected '(', expecting `end' or dummy end
+app/controllers/api/v1/user/chats_controller.rb:11: syntax error, unexpected '(', expecting `end' or dummy end
+app/controllers/api/v1/user/chats_controller.rb:11: syntax error, unexpected '(', expecting `end' or dummy end
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:18:00 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (742.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (882.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+Completed 500 Internal Server Error in 915ms (ActiveRecord: 882.4ms | Allocations: 5165)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'id_send' for Chat.):
+  
+app/controllers/api/v1/user/chats_controller.rb:5:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:18:40 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (307.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+Completed 500 Internal Server Error in 718ms (ActiveRecord: 307.3ms | Allocations: 1140)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'id_send' for Chat.):
+  
+app/controllers/api/v1/user/chats_controller.rb:5:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:19:22 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1127.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+Completed 500 Internal Server Error in 2075ms (ActiveRecord: 1127.9ms | Allocations: 1142)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'id_send' for Chat.):
+  
+app/controllers/api/v1/user/chats_controller.rb:5:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:20:29 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (747.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+Completed 500 Internal Server Error in 2113ms (ActiveRecord: 747.9ms | Allocations: 1143)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'id_send' for Chat.):
+  
+app/controllers/api/v1/user/chats_controller.rb:5:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:21:20 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (684.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+  [1m[36mTRANSACTION (305.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (1061.4ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (1500.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 9183ms (Views: 0.5ms | ActiveRecord: 8748.6ms | Allocations: 7970)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:21:52 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (482.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (364.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (678.8ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (466.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 7074ms (Views: 0.4ms | ActiveRecord: 6350.3ms | Allocations: 7663)
+
+
+  
+NameError (undefined local variable or method `id_send' for #<Api::V1::User::ChatsController:0x00000000036178>):
+  
+app/controllers/api/v1/user/chats_controller.rb:11:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:22:29 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (242.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+  [1m[36mTRANSACTION (249.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (273.9ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (317.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 3029ms (Views: 0.6ms | ActiveRecord: 2505.4ms | Allocations: 7687)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::User::ChatsController:0x0000000003abd8>):
+  
+app/controllers/api/v1/user/chats_controller.rb:11:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:22:54 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (333.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+  [1m[36mTRANSACTION (938.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (741.7ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, NULL, 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (274.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 5245ms (Views: 0.6ms | ActiveRecord: 4720.3ms | Allocations: 7318)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:23:32 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (859.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:22:in `authenticate_user'
+  [1m[36mTRANSACTION (149.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (249.2ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (466.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 5826ms (Views: 0.2ms | ActiveRecord: 5108.2ms | Allocations: 7655)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::User::ChatsController:0x00000000043f80>):
+  
+app/controllers/api/v1/user/chats_controller.rb:11:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:23:59 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1203.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+  [1m[36mTRANSACTION (1538.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (515.3ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (901.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 9565ms (Views: 0.6ms | ActiveRecord: 7959.8ms | Allocations: 7701)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::User::ChatsController:0x00000000048a44>):
+  
+app/controllers/api/v1/user/chats_controller.rb:11:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:24:31 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (578.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+Completed 500 Internal Server Error in 3308ms (ActiveRecord: 2723.3ms | Allocations: 4082)
+
+
+  
+NameError (undefined local variable or method `id_send' for #<Api::V1::User::ChatsController:0x0000000004d508>):
+  
+app/controllers/api/v1/user/chats_controller.rb:17:in `chat_params'
+app/controllers/api/v1/user/chats_controller.rb:5:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:25:04 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (1079.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+  [1m[36mTRANSACTION (556.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (984.1ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (470.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 7224ms (Views: 0.6ms | ActiveRecord: 6612.6ms | Allocations: 7695)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::User::ChatsController:0x00000000051fcc>):
+  
+app/controllers/api/v1/user/chats_controller.rb:11:in `create'
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:25:26 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (516.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+  [1m[36mTRANSACTION (241.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (135.1ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES (NULL, '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (293.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 6067ms (Views: 0.6ms | ActiveRecord: 4918.8ms | Allocations: 7347)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 10:26:10 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (855.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:23:in `authenticate_user'
+  [1m[36mTRANSACTION (173.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (248.1ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES ('10', '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (159.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 5475ms (Views: 0.5ms | ActiveRecord: 4384.8ms | Allocations: 7350)
+
+
+Started GET "/api/v1/comment/" for ::1 at 2023-02-03 10:31:21 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/comment"):
+  
+Started GET "/api/v1/comment/index" for ::1 at 2023-02-03 10:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/comment/index"):
+  
+Started GET "/api/v1/chats/index" for ::1 at 2023-02-03 10:31:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/chats/index"):
+  
+Started GET "/api/v1/chats/index" for ::1 at 2023-02-03 10:31:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/chats/index"):
+  
+Started GET "/api/v1/chats/index" for ::1 at 2023-02-03 10:32:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/chats/index"):
+  
+Started GET "/api/v1/chats/index" for ::1 at 2023-02-03 10:33:20 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/chats/index"):
+  
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:33:27 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (62.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 496ms (ActiveRecord: 369.7ms | Allocations: 4194)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:33:52 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (360.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 1704ms (ActiveRecord: 1325.5ms | Allocations: 3975)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:34:11 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (64.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 328ms (ActiveRecord: 232.1ms | Allocations: 3934)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:34:36 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (58.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 296ms (ActiveRecord: 238.0ms | Allocations: 3915)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:35:10 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (73.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 347ms (ActiveRecord: 270.9ms | Allocations: 3972)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:35:24 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (59.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 274ms (ActiveRecord: 190.2ms | Allocations: 3936)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:35:50 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (36.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 295ms (ActiveRecord: 238.0ms | Allocations: 3916)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:36:21 +0100
+  
+ArgumentError (Missing :action key on routes definition, please check your routes.):
+  
+config/routes.rb:20:in `block (4 levels) in <main>'
+config/routes.rb:16:in `block (3 levels) in <main>'
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:36:34 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (58.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 361ms (ActiveRecord: 289.7ms | Allocations: 3972)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:37:19 +0100
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::User::ChatsController):
+  
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/user/chats/" for ::1 at 2023-02-03 10:37:44 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (39.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 275ms (ActiveRecord: 195.8ms | Allocations: 3969)
+
+
+Started GET "/api/v1/user/chats/" for ::1 at 2023-02-03 10:39:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/chats"):
+  
+Started GET "/api/v1/user/chats/" for ::1 at 2023-02-03 10:39:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/chats"):
+  
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:40:02 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (43.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 308ms (ActiveRecord: 214.4ms | Allocations: 3973)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:40:36 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (38.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 375ms (ActiveRecord: 274.8ms | Allocations: 3935)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:40:54 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (65.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 394ms (ActiveRecord: 289.5ms | Allocations: 3934)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:41:24 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (51.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:27:in `authenticate_user'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 340ms (ActiveRecord: 268.7ms | Allocations: 3922)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:44:17 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (67.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (39.9ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 506ms (ActiveRecord: 394.7ms | Allocations: 6440)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:49:16 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (175.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (144.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+Completed 500 Internal Server Error in 1554ms (ActiveRecord: 1292.2ms | Allocations: 6796)
+
+
+  
+NoMethodError (undefined method `username' for #<Chat id: 12, id_send: "10", id_receive: "1", message: "This is a test comment.">):
+  
+app/controllers/api/v1/user/chats_controller.rb:17:in `block in index'
+app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:51:48 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (47.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (44.5ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `index'
+  [1m[36mChat Load (60.8ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_receive` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 536ms (ActiveRecord: 460.0ms | Allocations: 7029)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:52:05 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (59.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (90.3ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `index'
+  [1m[36mChat Load (73.7ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_receive` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 632ms (ActiveRecord: 529.4ms | Allocations: 7024)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:52:38 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (45.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (61.5ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 808ms (ActiveRecord: 696.2ms | Allocations: 6396)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:55:00 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (52.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:32:in `authenticate_user'
+  [1m[36mChat Load (36.1ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+Completed 500 Internal Server Error in 417ms (ActiveRecord: 328.1ms | Allocations: 6632)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/api/v1/user/chats_controller.rb:19:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:55:42 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (47.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (35.8ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 437ms (ActiveRecord: 358.9ms | Allocations: 6429)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:56:47 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (47.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (48.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 512ms (ActiveRecord: 413.4ms | Allocations: 6430)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 10:56:58 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (53.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (45.7ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 564ms (ActiveRecord: 447.2ms | Allocations: 6372)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:04:55 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (107.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (64.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 590ms (ActiveRecord: 258.1ms | Allocations: 5960)
+
+
+  [1m[35m (51.2ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (51.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddRoleToUsers (20230203100939)
+  [1m[35m (98.9ms)[0m  [1m[35mALTER TABLE `users` ADD `role` varchar(255)[0m
+  [1m[36mTRANSACTION (43.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (100.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230203100939')[0m
+  [1m[36mTRANSACTION (57.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (65.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (52.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (52.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-03 11:11:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (61.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (60.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (69.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:12:in `create'
+  [1m[36mUser Exists? (124.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (57.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:12:in `create'
+Completed 409 Conflict in 978ms (Views: 1.4ms | ActiveRecord: 310.7ms | Allocations: 6581)
+
+
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-03 11:11:52 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (57.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eniosdfz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (62.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:12:in `create'
+  [1m[36mUser Exists? (63.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'eniosdfz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:12:in `create'
+  [1m[36mUser Create (78.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`) VALUES ('Aiello', 'Enio', 'eniosdfz@gmail.com', '$2a$12$PCNY./fmwB3IMr2mwvqgyep.Uu/sdHnvc6HoA5NTaOS1IMOdGmuRi', '1225a2657a31a48cf5efbf366660749cb60a9842')[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (67.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:12:in `create'
+Completed 201 Created in 1006ms (Views: 0.4ms | ActiveRecord: 329.5ms | Allocations: 3562)
+
+
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-03 11:12:37 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 995ms (ActiveRecord: 297.5ms | Allocations: 4472)
+
+
+  
+NameError (undefined local variable or method `user' for #<Api::V1::Auth::Client::RegistersController:0x000000000e0ac4>):
+  
+app/controllers/api/v1/auth/client/registers_controller.rb:8:in `create'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-03 11:12:55 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 885ms (ActiveRecord: 187.7ms | Allocations: 3983)
+
+
+  
+NoMethodError (undefined method `add_role' for #<User id: nil, name: "Aiello", username: "Enio", email: "eniosdfz@gmail.com", password_digest: [FILTERED], token: nil, role: nil>):
+  
+app/controllers/api/v1/auth/client/registers_controller.rb:8:in `create'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-03 11:13:10 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 527ms (ActiveRecord: 200.3ms | Allocations: 3882)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/auth/client/registers_controller.rb:8:in `create'
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-03 11:15:25 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdfz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (139.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eniosdfz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (68.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mUser Exists? (38.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'eniosdfz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (64.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+Completed 409 Conflict in 866ms (Views: 1.8ms | ActiveRecord: 502.7ms | Allocations: 7104)
+
+
+Started POST "/api/v1/auth/client/registers/" for 127.0.0.1 at 2023-02-03 11:15:31 +0100
+Processing by Api::V1::Auth::Client::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdefzefz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniosdefzefz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (62.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eniosdefzefz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (55.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mUser Exists? (37.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'eniosdefzefz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mUser Create (68.6ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Aiello', 'Enio', 'eniosdefzefz@gmail.com', '$2a$12$iZtdlEtb93sJXmqKEl8al.08j/2EcwWPeXkf2Vpyv6ZzpzM/J16IS', '33e9e1a39f861cd6bcc9375dde8a67ecd58d5e89', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (33.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/registers_controller.rb:13:in `create'
+Completed 201 Created in 611ms (Views: 0.4ms | ActiveRecord: 257.3ms | Allocations: 3569)
+
+
+Started POST "/api/v1/auth/pro/registers/" for 127.0.0.1 at 2023-02-03 11:15:51 +0100
+Processing by Api::V1::Auth::Pro::RegistersController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniefzpoefko@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniefzpoefko@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (45.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eniefzpoefko@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (54.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:14:in `create'
+  [1m[36mUser Exists? (71.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'eniefzpoefko@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:14:in `create'
+  [1m[36mUser Create (91.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Aiello', 'Enio', 'eniefzpoefko@gmail.com', '$2a$12$XraPCYX/ZYT2ArPW/WHXA.NwVYfHBt8Cfc2/LlIFxdfVkD.oC.buu', '41ba166aa7caa811b1f5dfee4644d86be06d7bc8', 'pro')[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (41.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/pro/registers_controller.rb:14:in `create'
+Completed 201 Created in 633ms (Views: 0.4ms | ActiveRecord: 304.5ms | Allocations: 3570)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:19:10 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (64.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (55.7ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 519ms (ActiveRecord: 400.9ms | Allocations: 6727)
+
+
+Started GET "/api/v1/user/users/1" for ::1 at 2023-02-03 11:19:31 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (157.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro' AND `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Completed 404 Not Found in 394ms (ActiveRecord: 157.1ms | Allocations: 1293)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1 [WHERE `users`.`role` = ?]):
+  
+app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/users/1" for ::1 at 2023-02-03 11:20:13 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (89.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Completed 404 Not Found in 398ms (ActiveRecord: 298.4ms | Allocations: 2881)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/users/10" for ::1 at 2023-02-03 11:20:26 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (46.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+  [1m[36mComment Load (58.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 10[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:5:in `show'
+Completed 200 OK in 263ms (Views: 0.5ms | ActiveRecord: 177.3ms | Allocations: 3917)
+
+
+Started GET "/api/v1/user/users/index" for ::1 at 2023-02-03 11:21:33 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"index"}
+  [1m[36mUser Load (62.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Completed 404 Not Found in 390ms (ActiveRecord: 278.2ms | Allocations: 2878)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=index):
+  
+app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/users/index" for ::1 at 2023-02-03 11:22:22 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"index"}
+  [1m[36mUser Load (78.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Completed 404 Not Found in 377ms (ActiveRecord: 299.4ms | Allocations: 2878)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=index):
+  
+app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/users/index/" for ::1 at 2023-02-03 11:22:34 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"index"}
+  [1m[36mUser Load (55.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Completed 404 Not Found in 166ms (ActiveRecord: 55.3ms | Allocations: 959)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=index):
+  
+app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/users/index/" for ::1 at 2023-02-03 11:23:05 +0100
+Processing by Api::V1::User::UsersController#index as */*
+  [1m[36mUser Load (64.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:13:in `puts'
+No template found for Api::V1::User::UsersController#index, rendering head :no_content
+Completed 204 No Content in 384ms (ActiveRecord: 289.4ms | Allocations: 4232)
+
+
+Started GET "/api/v1/user/users/1/" for ::1 at 2023-02-03 11:23:18 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (189.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Completed 404 Not Found in 431ms (ActiveRecord: 189.6ms | Allocations: 1492)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/api/v1/user/users_controller.rb:3:in `show'
+Started GET "/api/v1/user/users/9/" for ::1 at 2023-02-03 11:23:23 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (41.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+  [1m[36mComment Load (60.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:5:in `show'
+Completed 200 OK in 245ms (Views: 0.3ms | ActiveRecord: 165.4ms | Allocations: 2000)
+
+
+Started GET "/api/v1/user/users/9/" for ::1 at 2023-02-03 11:23:37 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (296.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+  [1m[36mComment Load (161.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:5:in `show'
+Completed 200 OK in 2103ms (Views: 0.5ms | ActiveRecord: 1699.1ms | Allocations: 5899)
+
+
+Started GET "/api/v1/user/users/9/" for ::1 at 2023-02-03 11:24:43 +0100
+Processing by Api::V1::User::UsersController#show as */*
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (46.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:3:in `show'
+  [1m[36mComment Load (43.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 9[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:5:in `show'
+Completed 200 OK in 382ms (Views: 0.3ms | ActiveRecord: 312.4ms | Allocations: 5856)
+
+
+Started GET "/api/v1/user/users/" for ::1 at 2023-02-03 11:24:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/users"):
+  
+Started GET "/api/v1/user/users/index" for ::1 at 2023-02-03 11:24:58 +0100
+Processing by Api::V1::User::UsersController#index as */*
+  [1m[36mUser Load (71.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:13:in `index'
+No template found for Api::V1::User::UsersController#index, rendering head :no_content
+Completed 204 No Content in 135ms (ActiveRecord: 71.1ms | Allocations: 809)
+
+
+Started GET "/api/v1/user/users/index" for ::1 at 2023-02-03 11:25:15 +0100
+Processing by Api::V1::User::UsersController#index as */*
+  [1m[36mUser Load (82.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/users_controller.rb:13:in `index'
+No template found for Api::V1::User::UsersController#index, rendering head :no_content
+Completed 204 No Content in 354ms (ActiveRecord: 248.5ms | Allocations: 4170)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:27:51 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (39.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (65.1ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 635ms (ActiveRecord: 520.0ms | Allocations: 6666)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 11:29:21 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (61.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mTRANSACTION (51.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (88.9ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES ('10', '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (60.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 748ms (Views: 0.6ms | ActiveRecord: 583.3ms | Allocations: 7596)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:29:41 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (47.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (51.8ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 99.4ms | Allocations: 1840)
+
+
+  
+NoMethodError (undefined method `user' for #<Chat id: 13, id_send: "10", id_receive: "1", message: "This is a test comment.">):
+  
+app/controllers/api/v1/user/chats_controller.rb:17:in `block in index'
+app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:29:44 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (54.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (52.6ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+Completed 500 Internal Server Error in 217ms (ActiveRecord: 107.3ms | Allocations: 1636)
+
+
+  
+NoMethodError (undefined method `user' for #<Chat id: 13, id_send: "10", id_receive: "1", message: "This is a test comment.">):
+  
+app/controllers/api/v1/user/chats_controller.rb:17:in `block in index'
+app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:30:00 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (66.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (41.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 627ms (ActiveRecord: 496.1ms | Allocations: 6731)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:30:23 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (60.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (47.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 519ms (ActiveRecord: 397.6ms | Allocations: 6667)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:30:40 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (84.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (61.0ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `index'
+  [1m[36mChat Load (48.5ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_receive` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 865ms (ActiveRecord: 754.7ms | Allocations: 7281)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 11:34:22 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (61.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mTRANSACTION (26.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (58.6ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES ('10', '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (52.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 584ms (Views: 0.3ms | ActiveRecord: 493.6ms | Allocations: 7578)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:35:04 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (315.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (313.8ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:16:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 1016ms (ActiveRecord: 629.3ms | Allocations: 1463)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:39:19 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (88.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (40.7ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `uniq'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 481ms (ActiveRecord: 397.1ms | Allocations: 6688)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:44:16 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (67.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:31:in `authenticate_user'
+  [1m[36mChat Load (54.0ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:15:in `uniq'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 547ms (ActiveRecord: 460.8ms | Allocations: 6749)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:51:01 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (115.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:32:in `authenticate_user'
+  [1m[36mChat Load (58.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Completed 500 Internal Server Error in 575ms (ActiveRecord: 228.7ms | Allocations: 6534)
+
+
+  
+NoMethodError (undefined method `id_arr' for #<User id: 10, name: "Aiello", username: "Enio", email: "enio@gmail.com", password_digest: [FILTERED], token: [FILTERED], role: nil>):
+  
+app/controllers/api/v1/user/chats_controller.rb:18:in `block in index'
+app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:51:12 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (69.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:32:in `authenticate_user'
+  [1m[36mChat Load (60.7ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Completed 500 Internal Server Error in 639ms (ActiveRecord: 501.2ms | Allocations: 6995)
+
+
+  
+NoMethodError (undefined method `push' for "10":String):
+  
+app/controllers/api/v1/user/chats_controller.rb:18:in `block in index'
+app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:52:11 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (60.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:32:in `authenticate_user'
+  [1m[36mChat Load (62.8ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Completed 500 Internal Server Error in 573ms (ActiveRecord: 477.3ms | Allocations: 7033)
+
+
+  
+NoMethodError (undefined method `user_id' for #<Chat id: 13, id_send: "10", id_receive: "1", message: "This is a test comment.">):
+  
+app/controllers/api/v1/user/chats_controller.rb:18:in `block in index'
+app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:52:44 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (72.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:32:in `authenticate_user'
+  [1m[36mChat Load (69.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Completed 500 Internal Server Error in 570ms (ActiveRecord: 478.4ms | Allocations: 7040)
+
+
+  
+NoMethodError (undefined method `send_id' for #<Chat id: 13, id_send: "10", id_receive: "1", message: "This is a test comment.">):
+  
+app/controllers/api/v1/user/chats_controller.rb:18:in `block in index'
+app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:53:11 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (57.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:32:in `authenticate_user'
+  [1m[36mChat Load (89.1ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 650ms (ActiveRecord: 508.5ms | Allocations: 6701)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:53:28 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (53.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:33:in `authenticate_user'
+  [1m[36mChat Load (49.9ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 632ms (ActiveRecord: 534.0ms | Allocations: 6685)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:54:20 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (121.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:33:in `authenticate_user'
+Completed 500 Internal Server Error in 410ms (ActiveRecord: 314.0ms | Allocations: 4473)
+
+
+  
+NameError (undefined local variable or method `id_send_arr' for #<Api::V1::User::ChatsController:0x000000001619a8>):
+  
+app/controllers/api/v1/user/chats_controller.rb:15:in `index'
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:54:46 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (100.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:34:in `authenticate_user'
+  [1m[36mChat Load (54.6ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 720ms (ActiveRecord: 595.5ms | Allocations: 6742)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:54:55 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (56.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:34:in `authenticate_user'
+  [1m[36mChat Load (50.5ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 399ms (ActiveRecord: 107.0ms | Allocations: 1293)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:55:00 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (106.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:34:in `authenticate_user'
+  [1m[36mChat Load (54.8ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 592ms (ActiveRecord: 493.8ms | Allocations: 6703)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:57:48 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (97.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:36:in `authenticate_user'
+  [1m[36mChat Load (47.2ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 605ms (ActiveRecord: 546.9ms | Allocations: 6684)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 11:59:24 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (51.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:36:in `authenticate_user'
+  [1m[36mTRANSACTION (59.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (68.2ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES ('10', '1', 'This is a test comment.')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (60.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 600ms (Views: 0.7ms | ActiveRecord: 519.7ms | Allocations: 7637)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:59:30 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (49.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:36:in `authenticate_user'
+  [1m[36mChat Load (71.4ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 178ms (ActiveRecord: 121.3ms | Allocations: 1474)
+
+
+Started GET "/api/v1/user/chats/index" for ::1 at 2023-02-03 11:59:36 +0100
+Processing by Api::V1::User::ChatsController#index as */*
+  [1m[36mUser Load (60.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:36:in `authenticate_user'
+  [1m[36mChat Load (54.3ms)[0m  [1m[34mSELECT `chats`.* FROM `chats` WHERE `chats`.`id_send` = '10'[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:17:in `index'
+No template found for Api::V1::User::ChatsController#index, rendering head :no_content
+Completed 204 No Content in 182ms (ActiveRecord: 114.8ms | Allocations: 1304)
+
+
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-03 12:15:06 +0100
+Processing by Api::V1::User::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 9ms (Allocations: 1011)
+
+
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+app/controllers/api/v1/user/comments_controller.rb:24:in `authenticate_user'
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-03 12:20:35 +0100
+Processing by Api::V1::User::CommentsController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (41.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (40.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:7:in `create'
+  [1m[36mComment Create (45.0ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`) VALUES ('This is a test comment.', '10', 1)[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (45.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comments_controller.rb:7:in `create'
+Completed 201 Created in 605ms (Views: 1.2ms | ActiveRecord: 297.1ms | Allocations: 4505)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-03 12:21:17 +0100
+Processing by Api::V1::User::ChatsController#create as */*
+  Parameters: {"chat"=>{"message"=>"Matis est très [ gentil ]."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (44.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:36:in `authenticate_user'
+  [1m[36mTRANSACTION (36.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mChat Create (57.7ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES ('10', '1', 'Matis est très [ gentil ].')[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (32.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chats_controller.rb:6:in `create'
+Completed 200 OK in 247ms (Views: 0.5ms | ActiveRecord: 172.1ms | Allocations: 2532)
+
+

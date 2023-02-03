@@ -1,7 +1,7 @@
 class Api::V1::Test::TestsController < ApplicationController
-  
+
   before_action :authenticate_user
-  
+
   def index
       puts user_name = @current_user.name
   end
@@ -15,6 +15,4 @@ class Api::V1::Test::TestsController < ApplicationController
       @current_user = UsersPros.find_by(token: token)
     end
   end
-
 end
-  

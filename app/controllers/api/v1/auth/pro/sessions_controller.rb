@@ -1,7 +1,7 @@
 class Api::V1::Auth::Pro::SessionsController < ApplicationController
 
   def create
-    user = UsersPro.find_by(email: auth_params[:email])
+    user = User.find_by(email: auth_params[:email])
     if user && user.authenticate(auth_params[:password])
       render json: { Bienvenue: user.username }, status: :created
       session[:user_token] = user.token

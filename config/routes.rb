@@ -14,20 +14,20 @@ Rails.application.routes.draw do
 			end
 
 			namespace :user do
-				namespace :pro do
 					post '/:id/comments', to: 'comments#create', as: :create_comment
+					post '/:id/chats', to: 'chats#create', as: :create_chat
+					get '/users/index', to: 'users#index', as: :users_index
 					get '/users/:id', to: 'users#show', as: :show_user
-					#get 'comments/index/:user_id', to: 'comments#index', as: 'comments_index'
-				end
+					get '/chats/index/', to: 'chats#index', as: :chats_index
 			end
 		end
 	end
 
 	namespace :api do
 		namespace :v1 do
-		  namespace :test do
-			resources :tests
-		  end
+				namespace :test do
+				resources :tests
+			end
 		end
 	end
 end
