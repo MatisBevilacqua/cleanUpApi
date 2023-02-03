@@ -2,23 +2,22 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
 			namespace :auth do
+				resources :session
 				namespace :client do
-					resources :sessions
-					resources :registers
+					resources :register
 				end
 
 				namespace :pro do
-					resources :sessions
-					resources :registers
+					resources :register
 				end
 			end
 
 			namespace :user do
-					post '/:id/comments', to: 'comments#create', as: :create_comment
-					post '/:id/chats', to: 'chats#create', as: :create_chat
-					get '/users/index', to: 'users#index', as: :users_index
-					get '/users/:id', to: 'users#show', as: :show_user
-					get '/chats/index/', to: 'chats#index', as: :chats_index
+					post '/:id/comment', to: 'comment#create', as: :create_comment
+					post '/:id/chat', to: 'chat#create', as: :create_chat
+					get '/user/index', to: 'user#index', as: :users_index
+					get '/user/:id', to: 'user#show', as: :show_user
+					get '/chat/index/', to: 'chat#index', as: :chats_index
 			end
 		end
 	end

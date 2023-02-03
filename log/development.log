@@ -52499,3 +52499,838 @@ Can't verify CSRF token authenticity.
 Completed 200 OK in 247ms (Views: 0.5ms | ActiveRecord: 172.1ms | Allocations: 2532)
 
 
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 20:58:30 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::Client::RegisterController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (12.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (14.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 355ms (Views: 0.2ms | ActiveRecord: 98.0ms | Allocations: 26504)
+
+
+Started GET "/api/v1/user/user/1" for ::1 at 2023-02-03 20:58:58 +0100
+Processing by Api::V1::User::UserController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/user_controller.rb:5:in `show'
+Completed 404 Not Found in 27ms (ActiveRecord: 13.2ms | Allocations: 1424)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  
+app/controllers/api/v1/user/user_controller.rb:5:in `show'
+Started GET "/api/v1/user/user/10" for ::1 at 2023-02-03 20:59:02 +0100
+Processing by Api::V1::User::UserController#show as */*
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/user_controller.rb:5:in `show'
+  [1m[36mComment Load (12.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` = 10[0m
+  ↳ app/controllers/api/v1/user/user_controller.rb:7:in `show'
+Completed 200 OK in 62ms (Views: 0.3ms | ActiveRecord: 41.8ms | Allocations: 1925)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:11:06 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Matis", "name"=>"Bevilacqua", "email"=>"matis@gmail.com", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Matis", "name"=>"Bevilacqua", "email"=>"matis@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (22.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'matis@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'matis@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (12.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Bevilacqua', 'Matis', 'matis@gmail.com', '$2a$12$ObMCU8cFfIpFz7.8Nr5g..dOSELUDnfEvzZFd4Wz78mixTOoRYykm', '8e1fa75cc5bbb321ef380fb482e2dabd55434b4c', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 418ms (Views: 1.0ms | ActiveRecord: 93.1ms | Allocations: 7074)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:12:20 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 50.8ms | Allocations: 3227)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:12:21 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (16.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 75ms (ActiveRecord: 56.0ms | Allocations: 2994)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:12:42 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Matis", "name"=>"Bevilacqua", "email"=>"mejapfo@gmail.com", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Matis", "name"=>"Bevilacqua", "email"=>"mejapfo@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'mejapfo@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'mejapfo@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (12.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Bevilacqua', 'Matis', 'mejapfo@gmail.com', '$2a$12$31brnQub2RY7rNw43eR57.I6SVrnjjUNFjjJMV0i2ofuWHZdwIHum', 'f7f482f05b5a100abd6d41fc9744162df482a33f', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 356ms (Views: 0.1ms | ActiveRecord: 66.6ms | Allocations: 3160)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:41:05 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 159ms (ActiveRecord: 64.6ms | Allocations: 3107)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:42:30 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 85ms (ActiveRecord: 52.4ms | Allocations: 2997)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:42:30 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 80ms (ActiveRecord: 50.9ms | Allocations: 2993)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:42:30 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 52.1ms | Allocations: 2992)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:42:31 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 52.3ms | Allocations: 2992)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:42:31 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 66ms (ActiveRecord: 50.9ms | Allocations: 2991)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:42:31 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"", "name"=>"", "email"=>"", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = '' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+No template found for Api::V1::Auth::Client::RegisterController#create, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 49.6ms | Allocations: 2991)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:44:31 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Matis", "name"=>"Bevila", "email"=>"Euh@gmail.com", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Matis", "name"=>"Bevila", "email"=>"Euh@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Euh@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Euh@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (12.0ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Bevila', 'Matis', 'Euh@gmail.com', '$2a$12$KE6Wg2bx0pouy/PJmHrxze9GnZF6jkwquh7sYXOfh3si3pmus0AFC', 'a398651c112c7d72514217c635c4b08992475e8f', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 368ms (Views: 0.2ms | ActiveRecord: 66.8ms | Allocations: 3161)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:44:32 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Matis", "name"=>"Bevila", "email"=>"Euh@gmail.com", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Matis", "name"=>"Bevila", "email"=>"Euh@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Euh@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (15.0ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Euh@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 347ms (Views: 0.1ms | ActiveRecord: 53.4ms | Allocations: 3057)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:46:08 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Sezoefj", "name"=>"Aeroflotz", "email"=>"Offspring", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Sezoefj", "name"=>"Aeroflotz", "email"=>"Offspring", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Offspring' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Offspring' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (12.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Aeroflotz', 'Sezoefj', 'Offspring', '$2a$12$NbVZFNZCROfptaxt33gNLuq8oszvFUU03pfR/n4YTYGQRQcOGRB8W', '76e6b744cbecee2d1e106d560fd2e5e24b09e5d2', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 375ms (Views: 0.2ms | ActiveRecord: 112.4ms | Allocations: 26361)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:46:09 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Sezoefj", "name"=>"Aeroflotz", "email"=>"Offspring", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Sezoefj", "name"=>"Aeroflotz", "email"=>"Offspring", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (16.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Offspring' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (14.3ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Offspring' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 351ms (Views: 0.2ms | ActiveRecord: 52.2ms | Allocations: 3126)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:12 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (11.9ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Oezjpz', 'Efzpj', 'Joejojop', '$2a$12$jaaxKiZZTRsF8f9lwCHh6.xu18vpe4Tb/7kRK/vEnn9f0KpnIG3au', '19d51c1e6e9dbd3b0287e1d90bf82714d26bbc47', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 365ms (Views: 0.2ms | ActiveRecord: 67.6ms | Allocations: 3173)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:23 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 353ms (Views: 0.1ms | ActiveRecord: 55.4ms | Allocations: 3061)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:35 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 351ms (Views: 0.1ms | ActiveRecord: 51.6ms | Allocations: 3045)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:36 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:37 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (12.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:37 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (13.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 345ms (Views: 0.1ms | ActiveRecord: 49.7ms | Allocations: 5791)
+
+
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (15.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 318ms (Views: 0.1ms | ActiveRecord: 53.1ms | Allocations: 7490)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:37 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (15.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 319ms (Views: 0.1ms | ActiveRecord: 52.6ms | Allocations: 9229)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:37 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.9ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 314ms (Views: 0.1ms | ActiveRecord: 49.9ms | Allocations: 7490)
+
+
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 317ms (Views: 0.1ms | ActiveRecord: 51.2ms | Allocations: 6150)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:46 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (12.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 347ms (Views: 0.1ms | ActiveRecord: 50.2ms | Allocations: 3043)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:47:47 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Efzpj", "name"=>"Oezjpz", "email"=>"Joejojop", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Joejojop' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 354ms (Views: 0.1ms | ActiveRecord: 54.0ms | Allocations: 3046)
+
+
+Started POST "/api/v1/auth/pro/register/" for 127.0.0.1 at 2023-02-03 21:48:38 +0100
+Processing by Api::V1::Auth::Pro::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Éditons j’ai", "name"=>"Aliheafoh", "email"=>"Ohfaiofho", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Éditons j’ai", "name"=>"Aliheafoh", "email"=>"Ohfaiofho", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (17.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Ohfaiofho' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mUser Exists? (13.4ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Ohfaiofho' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mUser Create (12.1ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Aliheafoh', 'Éditons j’ai', 'Ohfaiofho', '$2a$12$rjlcCPA8gMW914sePBDr2.hwHr97kUXnLpTMwf2oY/IoSsZh0TU1a', 'a2ec97659fdfc6f5a1085563e5b4708bfe9c71a9', 'pro')[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+Completed 201 Created in 358ms (Views: 0.2ms | ActiveRecord: 69.9ms | Allocations: 3176)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:49:48 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (22.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (14.6ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 395ms (Views: 0.1ms | ActiveRecord: 111.1ms | Allocations: 6602)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:49:50 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 336ms (Views: 0.1ms | ActiveRecord: 50.6ms | Allocations: 3051)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:49:54 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enioeofz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enioeofz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enioeofz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (13.1ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enioeofz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (11.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Aiello', 'Enio', 'enioeofz@gmail.com', '$2a$12$w47rXydf45.CeIOVS35rEuaA0wzPSYZmJyWJVX/CMf27S0VDZB8Cm', 'd627ca1fddd4828caf5342cc764ee7689408c891', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 356ms (Views: 0.2ms | ActiveRecord: 67.7ms | Allocations: 3200)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:50:11 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Et ils", "name"=>"Aliajfi", "email"=>"Hahn", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Et ils", "name"=>"Aliajfi", "email"=>"Hahn", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (16.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Hahn' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Hahn' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (12.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Aliajfi', 'Et ils', 'Hahn', '$2a$12$m8eoazIt1eiWDHTpoG78ZeL/8CT.98Nqg8re2LqsT2oloXPdp22HK', 'a9e8707ab05bf683bc693103a4539389bd6fd49d', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 369ms (Views: 0.2ms | ActiveRecord: 70.4ms | Allocations: 3161)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:50:46 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Et ils", "name"=>"Aliajfi", "email"=>"Hahn", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Et ils", "name"=>"Aliajfi", "email"=>"Hahn", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'Hahn' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.5ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'Hahn' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 344ms (Views: 0.2ms | ActiveRecord: 51.7ms | Allocations: 3043)
+
+
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 21:50:49 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Et ils", "name"=>"Aliajfi", "email"=>"ZeezzHahn", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Et ils", "name"=>"Aliajfi", "email"=>"ZeezzHahn", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'ZeezzHahn' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'ZeezzHahn' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Create (11.8ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Aliajfi', 'Et ils', 'ZeezzHahn', '$2a$12$8HjX7ROEPek8DUaUWKXjW.XJ.yeGy0omXVR8aoFVnprmMcozrl5MG', '2e2a671f35f7ee6c79e1c02c16bfaf363dfcf388', 'client')[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 201 Created in 357ms (Views: 0.2ms | ActiveRecord: 65.9ms | Allocations: 3158)
+
+
+Started POST "/api/v1/auth/pro/register/" for 127.0.0.1 at 2023-02-03 23:02:50 +0100
+Processing by Api::V1::Auth::Pro::RegisterController#create as HTML
+  Parameters: {"user"=>{"username"=>"Matis", "name"=>"Bevilacqua", "email"=>"M@gmail.com", "password"=>"[FILTERED]"}, "register"=>{"user"=>{"username"=>"Matis", "name"=>"Bevilacqua", "email"=>"M@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'M@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mUser Exists? (12.2ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'M@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mUser Create (13.7ms)[0m  [1m[32mINSERT INTO `users` (`name`, `username`, `email`, `password_digest`, `token`, `role`) VALUES ('Bevilacqua', 'Matis', 'M@gmail.com', '$2a$12$WJREz2r.nVpbi9xNSUrPUualbjFUdP7qwF4J4b0wHS1GH0FWVybrW', '67e03e40c50bf72b818cac5afeccc33bc64226a1', 'pro')[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+Completed 201 Created in 445ms (Views: 0.8ms | ActiveRecord: 78.5ms | Allocations: 3287)
+
+
+Started POST "/api/v1/auth/pro/session/" for 127.0.0.1 at 2023-02-03 23:03:18 +0100
+Processing by Api::V1::Auth::Pro::SessionController#create as HTML
+  Parameters: {"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'M@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/session_controller.rb:5:in `create'
+Completed 201 Created in 323ms (Views: 0.3ms | ActiveRecord: 15.7ms | Allocations: 786)
+
+
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:39 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:42 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:42 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:42 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:44 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:47 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:48 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:49 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:49 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:57 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:03:57 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/pro/session/" for 127.0.0.1 at 2023-02-03 23:04:05 +0100
+Processing by Api::V1::Auth::Pro::SessionController#create as HTML
+  Parameters: {"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'M@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/session_controller.rb:5:in `create'
+Completed 401 Unauthorized in 325ms (Views: 0.2ms | ActiveRecord: 14.8ms | Allocations: 752)
+
+
+Started POST "/api/v1/auth/pro/session/" for 127.0.0.1 at 2023-02-03 23:04:12 +0100
+Processing by Api::V1::Auth::Pro::SessionController#create as HTML
+  Parameters: {"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'M@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/session_controller.rb:5:in `create'
+Completed 201 Created in 319ms (Views: 0.2ms | ActiveRecord: 14.9ms | Allocations: 757)
+
+
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:05:25 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/sessions/" for 127.0.0.1 at 2023-02-03 23:05:33 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/auth/client/sessions"):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:05:35 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/register/" for 127.0.0.1 at 2023-02-03 23:05:37 +0100
+Processing by Api::V1::Auth::Client::RegisterController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enioeofz@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"enioeofz@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enioeofz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:10:in `create'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mUser Exists? (12.8ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'enioeofz@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/client/register_controller.rb:14:in `create'
+Completed 409 Conflict in 346ms (Views: 0.1ms | ActiveRecord: 53.1ms | Allocations: 3047)
+
+
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:02 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:06 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:06 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:06 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:06 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:09 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:09 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:06:10 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::Client::SessionController
+Did you mean?  Api::V1::Auth::Client::SessionsController):
+  
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:07:04 +0100
+Processing by Api::V1::Auth::Client::SessionController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/session_controller.rb:5:in `create'
+Completed 201 Created in 343ms (Views: 0.2ms | ActiveRecord: 59.7ms | Allocations: 3834)
+
+
+Started POST "/api/v1/auth/client/session/" for 127.0.0.1 at 2023-02-03 23:07:09 +0100
+Processing by Api::V1::Auth::Client::SessionController#create as HTML
+  Parameters: {"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'M@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/client/session_controller.rb:5:in `create'
+Completed 201 Created in 313ms (Views: 0.2ms | ActiveRecord: 15.1ms | Allocations: 757)
+
+
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:08:22 +0100
+  
+Zeitwerk::NameError (expected file /Applications/MAMP/htdocs/Perso/cleanUpApi/app/controllers/api/v1/auth/session_controller.rb to define constant Api::V1::Auth::SessionController, but didn't):
+  
+zeitwerk (2.6.6) lib/zeitwerk/loader/callbacks.rb:25:in `on_file_autoloaded'
+zeitwerk (2.6.6) lib/zeitwerk/kernel.rb:31:in `require'
+activesupport (7.0.4.2) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.2) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.0.4.2) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:95:in `action_encoding_template'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:83:in `encode'
+actionpack (7.0.4.2) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.0.4.2) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:08:23 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::SessionController):
+  
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:08:24 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::SessionController):
+  
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:08:25 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::SessionController):
+  
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:08:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::SessionController):
+  
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:08:27 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::Auth::SessionController):
+  
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:08:32 +0100
+Processing by Api::V1::Auth::SessionController#create as */*
+  Parameters: {"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}, "session"=>{"auth"=>{"password"=>"[FILTERED]", "email"=>"enio@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (14.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'enio@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/session_controller.rb:5:in `create'
+Completed 201 Created in 348ms (Views: 0.2ms | ActiveRecord: 58.3ms | Allocations: 3835)
+
+
+Started POST "/api/v1/auth/session/" for 127.0.0.1 at 2023-02-03 23:12:31 +0100
+Processing by Api::V1::Auth::SessionController#create as HTML
+  Parameters: {"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"auth"=>{"email"=>"M@gmail.com", "password"=>"[FILTERED]"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'M@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/session_controller.rb:5:in `create'
+Completed 201 Created in 318ms (Views: 0.2ms | ActiveRecord: 13.0ms | Allocations: 757)
+
+
