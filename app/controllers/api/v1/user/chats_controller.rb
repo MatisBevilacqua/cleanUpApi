@@ -1,6 +1,7 @@
 class Api::V1::User::ChatsController < ApplicationController
   before_action :authenticate_user
 
+  # Envoyer un message
   def create
     chat = Chat.new(chat_params)
     if chat.save
@@ -10,6 +11,7 @@ class Api::V1::User::ChatsController < ApplicationController
     end
   end
 
+  # Afficher les id de ce à qui nous avons envoyer un message
   def index
     user = @current_user
     id_send_arr = []
@@ -31,11 +33,9 @@ class Api::V1::User::ChatsController < ApplicationController
     params.require(:chat).permit(:message).merge(id_receive: params[:id], id_send: user_send)
   end
 
+  # Récupérer le token
   def authenticate_user
     token = request.headers["Authorization"].split(" ").last
     @current_user = User.find_by_token(token)
-    if @current_user.nil?
-      @current_user = UsersPros.find_by(token: token)
-    end
   end
 end

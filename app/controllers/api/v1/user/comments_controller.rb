@@ -2,6 +2,7 @@ class Api::V1::User::CommentsController < ApplicationController
 
   before_action :authenticate_user
 
+  # Mettre un commentaire
   def create
     comment = Comment.new(comment_params)
     if comment.save
@@ -22,9 +23,6 @@ class Api::V1::User::CommentsController < ApplicationController
   def authenticate_user
     token = request.headers["Authorization"].split(" ").last
     @current_user = User.find_by(token: token)
-    if @current_user.nil?
-      @current_user = UsersPros.find_by(token: token)
-    end
   end
 end
 
