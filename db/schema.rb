@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_03_100939) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_06_140255) do
   create_table "chats", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.string "id_send"
     t.string "id_receive"
@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_03_100939) do
     t.string "content"
     t.string "send"
     t.integer "profile_id"
+    t.integer "ranking"
     t.index ["profile_id"], name: "index_comments_on_profile_id"
   end
 
@@ -31,6 +32,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_03_100939) do
     t.string "password_digest"
     t.string "token"
     t.string "role"
+    t.float "average_ranking"
+    t.integer "comment_count"
+    t.float "total_ranking"
   end
 
 end

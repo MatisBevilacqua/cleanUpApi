@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 					get '/user/index', to: 'user#index', as: :users_index
 					get '/user/:id', to: 'user#show', as: :show_user
 					get '/chat/index/', to: 'chat#index', as: :chats_index
+					get '/ranking/index/', to: 'ranking#index', as: :ranking_index
 			end
 		end
 	end

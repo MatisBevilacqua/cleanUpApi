@@ -53334,3 +53334,1734 @@ Can't verify CSRF token authenticity.
 Completed 201 Created in 318ms (Views: 0.2ms | ActiveRecord: 13.0ms | Allocations: 757)
 
 
+  [1m[35m (416.5ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (923.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddRankingsToComments (20230206100724)
+  [1m[35m (1067.8ms)[0m  [1m[35mALTER TABLE `comments` ADD `rankings` int[0m
+  [1m[36mTRANSACTION (65.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (478.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206100724')[0m
+  [1m[36mTRANSACTION (605.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (382.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (133.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (305.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-06 11:09:38 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (600.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/1/comments"):
+  
+Started POST "/api/v1/user/2/comments/" for ::1 at 2023-02-06 11:09:54 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/2/comments"):
+  
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-06 11:09:57 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/1/comments"):
+  
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-06 11:09:58 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/1/comments"):
+  
+Started POST "/api/v1/user/1/comments/" for ::1 at 2023-02-06 11:09:59 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/1/comments"):
+  
+Started POST "/api/v1/user/9/comments/" for ::1 at 2023-02-06 11:10:29 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/9/comments"):
+  
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 11:10:51 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "rankings"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (543.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+[31mUnpermitted parameter: :rankings. Context: { controller: Api::V1::User::CommentController, action: create, request: #<ActionDispatch::Request:0x0997f488>, params: {"comment"=>{"content"=>"This is a test comment.", "rankings"=>1}, "controller"=>"api/v1/user/comment", "action"=>"create", "id"=>"9"} }[0m
+  [1m[36mTRANSACTION (608.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (401.4ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `rankings`) VALUES ('This is a test comment.', '10', 9, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (506.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 6909ms (Views: 2.5ms | ActiveRecord: 5960.0ms | Allocations: 16974)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 11:11:27 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "rankings"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (645.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+[31mUnpermitted parameter: :rankings. Context: { controller: Api::V1::User::CommentController, action: create, request: #<ActionDispatch::Request:0x0be342ec>, params: {"comment"=>{"content"=>"This is a test comment.", "rankings"=>1}, "controller"=>"api/v1/user/comment", "action"=>"create", "id"=>"9"} }[0m
+  [1m[36mTRANSACTION (390.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (292.5ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `rankings`) VALUES ('This is a test comment.', '10', 9, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (359.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 2406ms (Views: 0.5ms | ActiveRecord: 1687.7ms | Allocations: 2664)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 11:11:44 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "rankings"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (310.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (277.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (457.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `rankings`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (226.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 2641ms (Views: 0.8ms | ActiveRecord: 2400.1ms | Allocations: 7944)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 11:13:11 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (380.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (314.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (662.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (490.5ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (640.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 4126ms (Views: 0.7ms | ActiveRecord: 4079.3ms | Allocations: 8562)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:20:10 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (89.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`roles` = 'pro' /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 506ms (ActiveRecord: 79.9ms | Allocations: 3468)
+
+
+  [1m[36mUser Load (89.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`roles` = 'pro' /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `id' for #<User::ActiveRecord_Relation:0x09ab64b4>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:20:26 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (56.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`roles` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 114.8ms | Allocations: 3216)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'users.roles' in 'where clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:21:07 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (66.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Completed 200 OK in 380ms (Views: 10.5ms | ActiveRecord: 293.1ms | Allocations: 5427)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:21:19 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (62.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro' /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 60.0ms | Allocations: 5361)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro' /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation [#<User id: 13, name: "Aiello", username: "Enio", email: "eniefzpoefko@gmail.com", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 19, name: "Aliheafoh", username: "Éditons j’ai", email: "Ohfaiofho", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 23, name: "Bevilacqua", username: "Matis", email: "a", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 25, name: "Ijf", username: "Arefkjj", email: "Zouk", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 26, name: "Oaefpoajz", username: "Ezra", email: "Oejfz", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 27, name: "AérAo", username: "Ezf", email: "Kpkafpk", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 28, name: "Ojzjojf", username: "Zefojnd", email: "Ohpjafeajezp", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 30, name: "Jfojzeio", username: "Efkiojeéofih", email: "Euh Jhioohif", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 31, name: "Hiuhj", username: "Efk", email: "Femihz", password_digest: [FILTERED], token: [FILTERED], role: "pro">]>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:21:31 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (53.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Completed 200 OK in 371ms (Views: 15.1ms | ActiveRecord: 256.0ms | Allocations: 5390)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:22:48 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (97.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Completed 500 Internal Server Error in 334ms (Views: 16.8ms | ActiveRecord: 273.2ms | Allocations: 6051)
+
+
+  
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation [#<User id: 13, name: "Aiello", username: "Enio", email: "eniefzpoefko@gmail.com", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 19, name: "Aliheafoh", username: "Éditons j’ai", email: "Ohfaiofho", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 23, name: "Bevilacqua", username: "Matis", email: "a", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 25, name: "Ijf", username: "Arefkjj", email: "Zouk", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 26, name: "Oaefpoajz", username: "Ezra", email: "Oejfz", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 27, name: "AérAo", username: "Ezf", email: "Kpkafpk", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 28, name: "Ojzjojf", username: "Zefojnd", email: "Ohpjafeajezp", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 30, name: "Jfojzeio", username: "Efkiojeéofih", email: "Euh Jhioohif", password_digest: [FILTERED], token: [FILTERED], role: "pro">, #<User id: 31, name: "Hiuhj", username: "Efk", email: "Femihz", password_digest: [FILTERED], token: [FILTERED], role: "pro">]>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:5:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:23:18 +0100
+Processing by Api::V1::User::RankingController#index as */*
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 52.4ms | Allocations: 1755)
+
+
+  
+NameError (undefined local variable or method `users' for #<Api::V1::User::RankingController:0x0000000002d17c>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:23:27 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (47.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 200 OK in 335ms (Views: 0.5ms | ActiveRecord: 252.1ms | Allocations: 4315)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:23:39 +0100
+Processing by Api::V1::User::RankingController#index as */*
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 98.4ms | Allocations: 1748)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+app/controllers/api/v1/user/ranking_controller.rb:4:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:25:18 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (53.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 378ms (ActiveRecord: 274.5ms | Allocations: 4530)
+
+
+  
+NameError (undefined local variable or method `user_ids' for #<Api::V1::User::RankingController:0x000000000399b8>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:5:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:25:28 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (174.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 200 OK in 462ms (Views: 0.4ms | ActiveRecord: 362.4ms | Allocations: 4272)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:26:02 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (84.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (72.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profil_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+Completed 500 Internal Server Error in 717ms (Views: 0.4ms | ActiveRecord: 435.8ms | Allocations: 6492)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'comments.profil_id' in 'where clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:26:17 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (46.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (57.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profil_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+Completed 500 Internal Server Error in 473ms (Views: 0.2ms | ActiveRecord: 399.9ms | Allocations: 6508)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'comments.profil_id' in 'where clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:26:33 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (48.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 397ms (Views: 0.2ms | ActiveRecord: 292.3ms | Allocations: 5431)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:26:55 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (59.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (52.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profil_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 390.8ms | Allocations: 6730)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'comments.profil_id' in 'where clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:27:06 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (71.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (215.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 200 OK in 773ms (Views: 8.1ms | ActiveRecord: 627.6ms | Allocations: 5774)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:27:53 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (57.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (87.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `puts'
+No template found for Api::V1::User::RankingController#index, rendering head :no_content
+Completed 204 No Content in 591ms (ActiveRecord: 481.2ms | Allocations: 5795)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:28:41 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (133.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (64.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `puts'
+No template found for Api::V1::User::RankingController#index, rendering head :no_content
+Completed 204 No Content in 338ms (ActiveRecord: 254.6ms | Allocations: 2945)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:28:51 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (70.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (60.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 200 OK in 512ms (Views: 9.7ms | ActiveRecord: 418.0ms | Allocations: 7301)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:29:18 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (67.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (80.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 200 OK in 217ms (Views: 5.3ms | ActiveRecord: 148.0ms | Allocations: 1763)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:32:08 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (60.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (48.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 595ms (Views: 11.4ms | ActiveRecord: 479.8ms | Allocations: 7335)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:32:20 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (333.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 2219ms (ActiveRecord: 1545.4ms | Allocations: 4478)
+
+
+  
+NameError (undefined local variable or method `comment' for #<Api::V1::User::RankingController:0x00000000063984>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:5:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:33:01 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (48.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 182.3ms | Allocations: 4528)
+
+
+  
+NameError (undefined local variable or method `comment' for #<Api::V1::User::RankingController:0x00000000067da4>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:5:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:33:32 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (50.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (43.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 518ms (Views: 7.9ms | ActiveRecord: 393.2ms | Allocations: 7399)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:33:42 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (131.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 401ms (ActiveRecord: 305.2ms | Allocations: 4470)
+
+
+  
+NameError (undefined local variable or method `comment' for #<Api::V1::User::RankingController:0x000000000704f4>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:5:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:34:04 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (61.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (65.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 521ms (Views: 6.9ms | ActiveRecord: 423.2ms | Allocations: 7398)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:34:31 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (54.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (40.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 507ms (Views: 0.4ms | ActiveRecord: 422.7ms | Allocations: 7076)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:38:17 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (57.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:5:in `map'
+  [1m[36mComment Load (189.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `puts'
+Completed 200 OK in 978ms (Views: 0.4ms | ActiveRecord: 896.7ms | Allocations: 7072)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:38:31 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (311.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:5:in `map'
+  [1m[36mComment Load (84.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 1284ms (ActiveRecord: 993.8ms | Allocations: 7776)
+
+
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `profile_id' for #<ActiveRecord::Relation [#<Comment id: 1, content: "Tres bonne vendeuse", send: "Enio", profile_id: 13, ranking: 1>, #<Comment id: 2, content: "Nul a chier", send: "Enio", profile_id: 19, ranking: 2>]>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:42:04 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (45.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 459ms (ActiveRecord: 347.5ms | Allocations: 8125)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Comment' to association named 'user'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:43:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (88.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (128.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 414ms (ActiveRecord: 354.4ms | Allocations: 10114)
+
+
+  
+NoMethodError (undefined method `name' for nil:NilClass):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:43:47 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (238.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 1569ms (ActiveRecord: 860.7ms | Allocations: 4757)
+
+
+  
+NoMethodError (undefined method `username' for nil:NilClass):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:43:58 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (54.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:5:in `map'
+  [1m[36mComment Load (60.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:8:in `map'
+Completed 500 Internal Server Error in 578ms (ActiveRecord: 485.1ms | Allocations: 8992)
+
+
+  
+NameError (undefined local variable or method `username' for #<Api::V1::User::RankingController:0x0000000000fe24>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:9:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:46:06 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (79.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:5:in `map'
+  [1m[36mUser Load (99.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+  [1m[36mComment Load (73.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:8:in `map'
+Completed 200 OK in 778ms (Views: 0.4ms | ActiveRecord: 677.9ms | Allocations: 8158)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:46:38 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (43.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:5:in `map'
+  [1m[36mComment Load (48.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+Completed 200 OK in 672ms (Views: 0.3ms | ActiveRecord: 573.1ms | Allocations: 7078)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:47:52 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (73.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:5:in `map'
+Completed 200 OK in 749ms (Views: 0.4ms | ActiveRecord: 627.2ms | Allocations: 4989)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:48:06 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (54.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:5:in `map'
+  [1m[36mComment Load (51.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 577ms (Views: 8.1ms | ActiveRecord: 457.1ms | Allocations: 7364)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:49:21 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (108.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (72.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 749ms (Views: 19.2ms | ActiveRecord: 640.3ms | Allocations: 7369)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:51:02 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (185.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mUser Load (74.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (SELECT `comments`.`id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31))[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+  [1m[36mComment Load (61.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 754ms (Views: 10.0ms | ActiveRecord: 681.2ms | Allocations: 8215)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:52:12 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (201.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mUser Load (55.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (SELECT `comments`.`id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31))[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `puts'
+  [1m[36mComment Load (59.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:8:in `index'
+Completed 200 OK in 798ms (Views: 12.3ms | ActiveRecord: 665.1ms | Allocations: 8057)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:52:27 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (985.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (148.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:8:in `index'
+Completed 200 OK in 5778ms (Views: 8.9ms | ActiveRecord: 4839.7ms | Allocations: 7442)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:52:46 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (92.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (84.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `puts'
+Completed 200 OK in 611ms (Views: 0.8ms | ActiveRecord: 508.7ms | Allocations: 7333)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:53:07 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (57.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (103.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 584ms (ActiveRecord: 390.9ms | Allocations: 8301)
+
+
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation [#<Comment id: 1, content: "Tres bonne vendeuse", send: "Enio", profile_id: 13, ranking: 1>, #<Comment id: 2, content: "Nul a chier", send: "Enio", profile_id: 19, ranking: 2>]>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:54:16 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (707.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mUser Load (61.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (SELECT `comments`.`id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31))[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 3532ms (Views: 2.5ms | ActiveRecord: 2304.3ms | Allocations: 5913)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:54:54 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (81.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (76.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 693ms (ActiveRecord: 463.7ms | Allocations: 7774)
+
+
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `profile_id' for #<ActiveRecord::Relation [#<Comment id: 1, content: "Tres bonne vendeuse", send: "Enio", profile_id: 13, ranking: 1>, #<Comment id: 2, content: "Nul a chier", send: "Enio", profile_id: 19, ranking: 2>]>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:55:19 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (78.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (84.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 652ms (Views: 8.1ms | ActiveRecord: 574.4ms | Allocations: 7458)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:57:14 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (53.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Pluck (53.2ms)[0m  [1m[34mSELECT `comments`.`profile_id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 200 OK in 534ms (Views: 0.3ms | ActiveRecord: 398.1ms | Allocations: 5616)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:57:45 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (68.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (67.8ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 200 OK in 610ms (Views: 7.3ms | ActiveRecord: 518.2ms | Allocations: 7367)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 11:58:49 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (52.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Pluck (51.7ms)[0m  [1m[34mSELECT `comments`.`profile_id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+  [1m[36mComment Load (38.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Completed 200 OK in 531ms (Views: 6.0ms | ActiveRecord: 441.6ms | Allocations: 7916)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 12:00:40 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (67.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 458ms (ActiveRecord: 382.7ms | Allocations: 5241)
+
+
+  
+NameError (undefined local variable or method `profile_id' for #<Api::V1::User::RankingController:0x000000000563ec>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 12:00:50 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (46.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (70.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 200 OK in 586ms (Views: 11.6ms | ActiveRecord: 471.5ms | Allocations: 7367)
+
+
+  [1m[35m (47.0ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (52.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddProfileNameToComments (20230206110645)
+  [1m[35m (70.2ms)[0m  [1m[35mALTER TABLE `comments` ADD `profile_name` varchar(255)[0m
+  [1m[36mTRANSACTION (71.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (38.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206110645')[0m
+  [1m[36mTRANSACTION (42.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (74.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (42.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (83.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 12:09:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (44.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (56.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:27:in `authenticate_user'
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 56.4ms | Allocations: 4137)
+
+
+  
+NameError (undefined local variable or method `name' for #<Api::V1::User::CommentController:0x0000000005eac4>):
+  
+app/controllers/api/v1/user/comment_controller.rb:22:in `comment_params'
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 12:10:16 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (96.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:27:in `authenticate_user'
+Completed 500 Internal Server Error in 467ms (ActiveRecord: 347.1ms | Allocations: 4350)
+
+
+  
+NameError (undefined local variable or method `name' for #<Api::V1::User::CommentController:0x00000000062f34>):
+  
+app/controllers/api/v1/user/comment_controller.rb:22:in `comment_params'
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 12:10:40 +0100
+  
+ActiveRecord::DatabaseConnectionError (There is an issue connecting with your hostname: rjt4ktfs.ddns.net.
+
+Please check your database configuration and ensure there is a valid connection to your database.
+):
+  
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:51:in `rescue in new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `new_client'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:144:in `connect'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/mysql2_adapter.rb:125:in `reconnect!'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract_adapter.rb:587:in `verify!'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `block in checkout_and_verify'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:107:in `run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:929:in `_run_checkout_callbacks'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:704:in `checkout_and_verify'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:341:in `checkout'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:181:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_adapters/abstract/connection_handler.rb:211:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:313:in `retrieve_connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:280:in `connection'
+activerecord (7.0.4.2) lib/active_record/connection_handling.rb:334:in `clear_cache!'
+activerecord (7.0.4.2) lib/active_record/railtie.rb:284:in `block (3 levels) in <class:Railtie>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:445:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:445:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:687:in `block (2 levels) in default_terminator'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:686:in `catch'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:686:in `block in default_terminator'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:106:in `run_callbacks'
+activesupport (7.0.4.2) lib/active_support/reloader.rb:120:in `class_unload!'
+railties (7.0.4.2) lib/rails/application/finisher.rb:209:in `block (2 levels) in <module:Finisher>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:445:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:445:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:687:in `block (2 levels) in default_terminator'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:686:in `catch'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:686:in `block in default_terminator'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:106:in `run_callbacks'
+activesupport (7.0.4.2) lib/active_support/execution_wrapper.rb:129:in `run'
+activesupport (7.0.4.2) lib/active_support/execution_wrapper.rb:125:in `run!'
+activesupport (7.0.4.2) lib/active_support/reloader.rb:114:in `run!'
+activesupport (7.0.4.2) lib/active_support/execution_wrapper.rb:78:in `block in run!'
+<internal:kernel>:90:in `tap'
+activesupport (7.0.4.2) lib/active_support/execution_wrapper.rb:75:in `run!'
+activesupport (7.0.4.2) lib/active_support/reloader.rb:63:in `run!'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 12:11:12 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (72.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:27:in `authenticate_user'
+Completed 500 Internal Server Error in 587ms (ActiveRecord: 217.9ms | Allocations: 7091)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'name' for Comment.):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 13:39:05 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (56.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (40.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (46.5ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`, `profile_name`) VALUES ('This is a test comment.', '10', 9, 1, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (69.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 684ms (Views: 0.6ms | ActiveRecord: 274.7ms | Allocations: 8869)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 13:40:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (51.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (71.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (50.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (79.1ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`, `profile_name`) VALUES ('This is a test comment.', '10', 9, 1, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (52.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 253.6ms | Allocations: 3633)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'profile_name' in 'field list'):
+  
+app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 13:40:23 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (60.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (75.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (48.3ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`, `profile_name`) VALUES ('This is a test comment.', '10', 9, 1, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (36.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 220.2ms | Allocations: 3524)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'profile_name' in 'field list'):
+  
+app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 13:42:05 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (65.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (58.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (43.4ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (64.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 201 Created in 626ms (Views: 0.6ms | ActiveRecord: 529.7ms | Allocations: 7976)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 13:45:58 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (54.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (43.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (62.6ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (67.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 201 Created in 709ms (Views: 0.6ms | ActiveRecord: 580.5ms | Allocations: 7933)
+
+
+Started GET "/api/v1/user/users/index" for ::1 at 2023-02-06 13:46:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/users/index"):
+  
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 13:46:29 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (45.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 45.5ms | Allocations: 2716)
+
+
+  
+ActiveRecord::ConfigurationError (Can't join 'Comment' to association named 'user'; perhaps you misspelled it?):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 13:50:18 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (67.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (70.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` INNER JOIN `users` ON `users`.`comment_id` = `comments`.`id` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 650ms (ActiveRecord: 512.7ms | Allocations: 8371)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'users.comment_id' in 'on clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 13:50:48 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (58.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 381.3ms | Allocations: 5513)
+
+
+  
+NameError (undefined local variable or method `comments' for #<Api::V1::User::RankingController:0x0000000007ce98>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 13:51:00 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (45.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (42.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` INNER JOIN `users` ON `users`.`comment_id` = `comments`.`id` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 490ms (ActiveRecord: 388.5ms | Allocations: 7685)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'users.comment_id' in 'on clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 13:52:48 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (71.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (42.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` INNER JOIN `users` ON `users`.`comment_id` = `comments`.`id` WHERE `comments`.`user_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 501ms (ActiveRecord: 411.4ms | Allocations: 7672)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'comments.user_id' in 'where clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 13:52:55 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (70.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (65.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` INNER JOIN `users` ON `users`.`comment_id` = `comments`.`id` WHERE `comments`.`id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 520ms (ActiveRecord: 423.5ms | Allocations: 7692)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'users.comment_id' in 'on clause'):
+  
+app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 13:53:15 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (81.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (52.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `index'
+Completed 200 OK in 750ms (Views: 7.0ms | ActiveRecord: 471.9ms | Allocations: 7627)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:00:13 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (73.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (68.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 546ms (Views: 1.0ms | ActiveRecord: 205.8ms | Allocations: 6967)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:01:11 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (50.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (241.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 1364ms (Views: 0.8ms | ActiveRecord: 1289.0ms | Allocations: 7508)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:01:22 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (82.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (69.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 552ms (Views: 0.3ms | ActiveRecord: 484.3ms | Allocations: 7483)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:02:30 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (83.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (77.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 611ms (Views: 1.2ms | ActiveRecord: 527.4ms | Allocations: 7547)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:04:41 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (86.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (117.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 615ms (Views: 0.7ms | ActiveRecord: 531.6ms | Allocations: 7506)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:05:52 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (79.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (77.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+Completed 200 OK in 633ms (Views: 0.4ms | ActiveRecord: 572.6ms | Allocations: 7530)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:06:08 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (41.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mUser Load (125.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `puts'
+  [1m[36mComment Load (73.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:8:in `map'
+Completed 200 OK in 722ms (Views: 1.3ms | ActiveRecord: 605.9ms | Allocations: 8135)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:06:38 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (53.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (71.2ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+  [1m[36mUser Load (45.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:13:in `index'
+Completed 200 OK in 659ms (Views: 5.1ms | ActiveRecord: 538.3ms | Allocations: 8251)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:07:13 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (52.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (72.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+  [1m[36mUser Load (119.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (SELECT `comments`.`id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31))[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:13:in `index'
+Completed 200 OK in 712ms (Views: 7.4ms | ActiveRecord: 610.8ms | Allocations: 8344)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:08:37 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (47.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 270.2ms | Allocations: 5481)
+
+
+  
+NameError (undefined local variable or method `comment' for #<Api::V1::User::RankingController:0x000000000b8aec>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:08:49 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (50.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (41.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+Completed 500 Internal Server Error in 812ms (ActiveRecord: 640.7ms | Allocations: 8070)
+
+
+  [1m[36mCACHE Comment Load (0.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31) /* loading for inspect */ LIMIT 11[0m
+  
+NoMethodError (undefined method `profile_id' for #<ActiveRecord::Relation [#<Comment id: 1, content: "Tres bonne vendeuse", send: "Enio", profile_id: 13, ranking: 1>, #<Comment id: 2, content: "Nul a chier", send: "Enio", profile_id: 19, ranking: 2>]>):
+  
+app/controllers/api/v1/user/ranking_controller.rb:7:in `index'
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:09:10 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (120.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (75.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:7:in `map'
+Completed 200 OK in 675ms (Views: 0.3ms | ActiveRecord: 593.9ms | Allocations: 7586)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:13:08 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (63.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (59.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 503ms (Views: 1.1ms | ActiveRecord: 423.6ms | Allocations: 7505)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:13:17 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (65.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (54.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 509ms (Views: 0.5ms | ActiveRecord: 437.8ms | Allocations: 7505)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:16:00 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (66.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (90.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:6:in `map'
+Completed 200 OK in 19743ms (Views: 0.4ms | ActiveRecord: 235.1ms | Allocations: 1817)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:17:59 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (394.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (665.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:13:in `index'
+Completed 200 OK in 4635ms (Views: 8.2ms | ActiveRecord: 4153.3ms | Allocations: 7570)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:20:27 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (114.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (91.7ms)[0m  [1m[34mSELECT `comments`.`ranking` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:13:in `index'
+Completed 200 OK in 720ms (Views: 8.5ms | ActiveRecord: 603.4ms | Allocations: 7576)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:20:54 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (48.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (70.1ms)[0m  [1m[34mSELECT `comments`.`ranking`, `comments`.`profile_id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:13:in `index'
+Completed 200 OK in 575ms (Views: 6.9ms | ActiveRecord: 486.1ms | Allocations: 7542)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:21:19 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (47.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+  [1m[36mComment Load (80.5ms)[0m  [1m[34mSELECT `comments`.`ranking`, `comments`.`profile_id`, `comments`.`id` FROM `comments` WHERE `comments`.`profile_id` IN (13, 19, 23, 25, 26, 27, 28, 30, 31)[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:13:in `index'
+Completed 200 OK in 479ms (Views: 7.8ms | ActiveRecord: 387.8ms | Allocations: 7551)
+
+
+  [1m[35m (35.9ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (55.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddTotalRankingToUser (20230206132420)
+  [1m[35m (74.7ms)[0m  [1m[35mALTER TABLE `users` ADD `total_ranking` float(24)[0m
+  [1m[36mTRANSACTION (49.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (29.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206132420')[0m
+  [1m[36mTRANSACTION (69.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (70.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (79.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (48.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (63.1ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (59.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddCommentCountToUser (20230206133205)
+  [1m[35m (92.7ms)[0m  [1m[35mALTER TABLE `users` ADD `comment_count` int[0m
+  [1m[36mTRANSACTION (46.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (53.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206133205')[0m
+  [1m[36mTRANSACTION (44.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAverageRankingToUser (20230206133329)
+  [1m[35m (96.5ms)[0m  [1m[35mALTER TABLE `users` ADD `average_ranking` float(24)[0m
+  [1m[36mTRANSACTION (52.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (46.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206133329')[0m
+  [1m[36mTRANSACTION (73.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (90.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (57.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (54.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:36:21 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (111.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (110.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 200 OK in 130ms (Views: 0.2ms | ActiveRecord: 110.2ms | Allocations: 4413)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:36:41 +0100
+  
+NoMethodError (undefined method `after_create' for Api::V1::User::CommentController:Class):
+  
+app/controllers/api/v1/user/comment_controller.rb:4:in `<class:CommentController>'
+app/controllers/api/v1/user/comment_controller.rb:1:in `<main>'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:39:59 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (55.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (50.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (74.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (49.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 715ms (ActiveRecord: 571.1ms | Allocations: 10985)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:41:11 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (69.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (55.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (47.6ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (51.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 911ms (ActiveRecord: 680.6ms | Allocations: 9612)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:43:23 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (76.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+[31mUnpermitted parameter: :ranking. Context: { controller: Api::V1::User::CommentController, action: create, request: #<ActionDispatch::Request:0x0bf0561c>, params: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "controller"=>"api/v1/user/comment", "action"=>"create", "id"=>"9"} }[0m
+  [1m[36mTRANSACTION (45.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (62.2ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (50.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 641ms (ActiveRecord: 556.2ms | Allocations: 9692)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:43:32 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (74.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (68.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (229.3ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (486.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 1399ms (ActiveRecord: 1306.1ms | Allocations: 9612)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:45:03 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (46.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (45.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (72.5ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (44.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 201 Created in 595ms (Views: 0.6ms | ActiveRecord: 513.8ms | Allocations: 8788)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:45:26 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (83.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (44.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (97.5ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (45.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 823ms (ActiveRecord: 541.1ms | Allocations: 9414)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/auth/pro/registers/" for 127.0.0.1 at 2023-02-06 14:46:03 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/auth/pro/registers"):
+  
+Started POST "/api/v1/auth/pro/register/" for 127.0.0.1 at 2023-02-06 14:46:17 +0100
+Processing by Api::V1::Auth::Pro::RegisterController#create as */*
+  Parameters: {"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniefzpoefko@gmail.com"}, "register"=>{"user"=>{"username"=>"Enio", "name"=>"Aiello", "password"=>"[FILTERED]", "email"=>"eniefzpoefko@gmail.com"}}}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (52.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'eniefzpoefko@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (49.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mUser Exists? (79.7ms)[0m  [1m[34mSELECT 1 AS one FROM `users` WHERE `users`.`email` = 'eniefzpoefko@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (51.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/auth/pro/register_controller.rb:15:in `create'
+Completed 409 Conflict in 741ms (Views: 0.4ms | ActiveRecord: 233.1ms | Allocations: 3983)
+
+
+Started GET "/api/v1/user/ranking/index" for 127.0.0.1 at 2023-02-06 14:46:40 +0100
+Processing by Api::V1::User::RankingController#index as */*
+  [1m[36mUser Load (66.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`role` = 'pro'[0m
+  ↳ app/controllers/api/v1/user/ranking_controller.rb:4:in `map'
+Completed 200 OK in 158ms (Views: 0.8ms | ActiveRecord: 66.1ms | Allocations: 985)
+
+
+Started POST "/api/v1/user/1/chats/" for ::1 at 2023-02-06 14:46:46 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/1/chats"):
+  
+Started POST "/api/v1/user/1/chat/" for ::1 at 2023-02-06 14:46:51 +0100
+Processing by Api::V1::User::ChatController#create as */*
+  Parameters: {"chat"=>{"message"=>"Matis est très [ gentil ]."}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (400.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/chat_controller.rb:41:in `authenticate_user'
+  [1m[36mTRANSACTION (45.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/chat_controller.rb:8:in `create'
+  [1m[36mChat Create (46.6ms)[0m  [1m[32mINSERT INTO `chats` (`id_send`, `id_receive`, `message`) VALUES ('10', '1', 'Matis est très [ gentil ].')[0m
+  ↳ app/controllers/api/v1/user/chat_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (61.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/chat_controller.rb:8:in `create'
+Completed 200 OK in 1404ms (Views: 0.2ms | ActiveRecord: 820.2ms | Allocations: 5718)
+
+
+Started GET "/api/v1/user/users/index" for ::1 at 2023-02-06 14:46:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/user/users/index"):
+  
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:47:07 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (39.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (45.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (37.1ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (46.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 169.1ms | Allocations: 2953)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comments/" for ::1 at 2023-02-06 14:47:23 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/user/9/comments"):
+  
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:47:24 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (59.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (49.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (58.8ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (38.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 205.9ms | Allocations: 2949)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:49:29 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (397.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (377.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (396.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (267.0ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (217.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 1274ms (ActiveRecord: 1258.5ms | Allocations: 2950)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:49:47 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (87.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (53.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (46.6ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (69.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 727ms (ActiveRecord: 623.1ms | Allocations: 8523)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:49:53 +0100
+Error occurred while parsing request parameters.
+Contents:
+
+{
+  "comment": {
+    "content": "This is a test comment.",
+  } 
+}
+Processing by Api::V1::User::CommentController#create as */*
+Completed 400 Bad Request in 7ms (ActiveRecord: 0.0ms | Allocations: 762)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+actionpack (7.0.4.2) lib/action_dispatch/http/parameters.rb:96:in `rescue in parse_formatted_parameters'
+actionpack (7.0.4.2) lib/action_dispatch/http/parameters.rb:92:in `parse_formatted_parameters'
+actionpack (7.0.4.2) lib/action_dispatch/http/request.rb:390:in `block in POST'
+rack (2.2.6.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.6.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (7.0.4.2) lib/action_dispatch/http/request.rb:389:in `POST'
+actionpack (7.0.4.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (7.0.4.2) lib/action_controller/metal/strong_parameters.rb:1232:in `params'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:485:in `form_authenticity_param'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:352:in `request_authenticity_tokens'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:345:in `any_authenticity_token_valid?'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:340:in `verified_request?'
+actionpack (7.0.4.2) lib/action_controller/metal/request_forgery_protection.rb:270:in `verify_authenticity_token'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:49:58 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (75.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:25:in `authenticate_user'
+  [1m[36mTRANSACTION (47.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mComment Create (41.6ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (56.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 221.1ms | Allocations: 2949)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:8:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:50:31 +0100
+  
+SyntaxError (C:/Users/Mathis BEVILACQUA/Desktop/cleanUpApi/app/controllers/api/v1/user/comment_controller.rb:19: syntax error, unexpected ':', expecting ')'
+...uire(:comment).permit(:content:ranking).merge(profile_id: pa...
+...                              ^
+):
+  
+app/controllers/api/v1/user/comment_controller.rb:19: syntax error, unexpected ':', expecting ')'
+app/controllers/api/v1/user/comment_controller.rb:19: syntax error, unexpected ':', expecting ')'
+app/controllers/api/v1/user/comment_controller.rb:19: syntax error, unexpected ':', expecting ')'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:50:49 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (81.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (55.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+  [1m[36mComment Create (77.4ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (48.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 678ms (ActiveRecord: 583.2ms | Allocations: 8524)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:51:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (70.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (49.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (37.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+  [1m[36mComment Create (63.3ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (36.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+Completed 500 Internal Server Error in 581ms (ActiveRecord: 517.8ms | Allocations: 16603)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:51:46 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (52.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:24:in `authenticate_user'
+  [1m[36mTRANSACTION (183.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+  [1m[36mComment Create (180.3ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES (NULL, NULL, NULL, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (70.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:7:in `create'
+Completed 201 Created in 1164ms (Views: 0.5ms | ActiveRecord: 930.7ms | Allocations: 8127)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:52:23 +0100
+  
+SyntaxError (C:/Users/Mathis BEVILACQUA/Desktop/cleanUpApi/app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+  has_one: user
+         ^
+):
+  
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:53:14 +0100
+  
+SyntaxError (C:/Users/Mathis BEVILACQUA/Desktop/cleanUpApi/app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+  has_one: user
+         ^
+):
+  
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:53:20 +0100
+  
+SyntaxError (C:/Users/Mathis BEVILACQUA/Desktop/cleanUpApi/app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+  has_one: user
+         ^
+):
+  
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:53:32 +0100
+  
+SyntaxError (C:/Users/Mathis BEVILACQUA/Desktop/cleanUpApi/app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+  has_one: user
+         ^
+):
+  
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+app/models/comment.rb:2: syntax error, unexpected ':', expecting `end' or dummy end
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:54:03 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (61.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (54.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (41.2ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (66.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 655ms (Views: 0.7ms | ActiveRecord: 569.0ms | Allocations: 8567)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:54:20 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment."}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (69.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (54.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (48.8ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, NULL)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (44.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 674ms (Views: 0.7ms | ActiveRecord: 578.0ms | Allocations: 7904)
+
+
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:54:32 +0100
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (80.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:26:in `authenticate_user'
+  [1m[36mTRANSACTION (68.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (42.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (32.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+Completed 201 Created in 338ms (Views: 1.3ms | ActiveRecord: 222.9ms | Allocations: 2591)
+
+
+  [1m[35m (68.8ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (50.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddAverageRankingToUser (20230206135706)
+  [1m[35m (87.4ms)[0m  [1m[35mALTER TABLE `users` ADD `average_ranking` float(24)[0m
+  [1m[36mTRANSACTION (54.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (50.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206135706')[0m
+  [1m[36mTRANSACTION (39.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCommentCountToUser (20230206135758)
+  [1m[35m (102.5ms)[0m  [1m[35mALTER TABLE `users` ADD `comment_count` int[0m
+  [1m[36mTRANSACTION (41.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (43.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206135758')[0m
+  [1m[36mTRANSACTION (66.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (75.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (41.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (49.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started POST "/api/v1/user/9/comment/" for ::1 at 2023-02-06 14:58:39 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (66.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::User::CommentController#create as */*
+  Parameters: {"comment"=>{"content"=>"This is a test comment.", "ranking"=>1}, "id"=>"9"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (94.9ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`token` = '72a609aa4d95e7971785813eed6c185a2387eee8' LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:31:in `authenticate_user'
+  [1m[36mTRANSACTION (66.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mComment Create (45.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `send`, `profile_id`, `ranking`) VALUES ('This is a test comment.', '10', 9, 1)[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (65.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:9:in `create'
+  [1m[36mUser Load (77.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/user/comment_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 736ms (ActiveRecord: 690.8ms | Allocations: 10906)
+
+
+  
+NoMethodError (undefined method `total_ranking' for #<User id: 9, name: "matis5", username: "matis5", email: "matis5@gmail.com", password_digest: [FILTERED], token: [FILTERED], role: nil, average_ranking: nil, comment_count: nil>):
+  
+app/controllers/api/v1/user/comment_controller.rb:11:in `create'
+  [1m[35m (37.7ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (45.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (49.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (67.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (87.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (42.9ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (43.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (39.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (59.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[35m (59.8ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (58.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (57.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (42.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (54.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (51.2ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (40.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (48.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (81.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (49.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (53.4ms)[0m  [1m[34mSELECT GET_LOCK('757462603559733855', 0)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (42.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddTotalRankingToUser (20230206140255)
+  [1m[35m (74.8ms)[0m  [1m[35mALTER TABLE `users` ADD `total_ranking` float(24)[0m
+  [1m[36mTRANSACTION (56.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (51.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20230206140255')[0m
+  [1m[36mTRANSACTION (67.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (60.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (47.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('757462603559733855')[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (49.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m

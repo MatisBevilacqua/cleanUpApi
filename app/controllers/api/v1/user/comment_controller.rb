@@ -7,6 +7,13 @@ class Api::V1::User::CommentController < ApplicationController
   def create
     comment = Comment.new(comment_params)
     if comment.save
+      user = User.find(params[:id])
+      user.total_ranking ||= 0
+      user.comment_count ||= 0
+      user.average_ranking ||= 0
+      user.total_ranking += comment.ranking
+      user.comment_count += 1
+      user.update_average_ranking
       render json: { comment: comment }, status: :created
     else
       render json: { error: comment.errors }, status: :unprocessable_entity
@@ -18,7 +25,7 @@ class Api::V1::User::CommentController < ApplicationController
   def comment_params
     user = @current_user
     send_info = user.id
-    params.require(:comment).permit(:content).merge(profile_id: params[:id], send: send_info)
+    params.require(:comment).permit(:content, :ranking).merge(profile_id: params[:id], send: send_info)
   end
 
   def authenticate_user
@@ -26,4 +33,3 @@ class Api::V1::User::CommentController < ApplicationController
     @current_user = User.find_by(token: token)
   end
 end
-
