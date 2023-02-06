@@ -5,6 +5,11 @@ class Api::V1::User::RankingController < ApplicationController
     render json: { user: user_id }, status: :ok
   end
 
+  def show
+    city = User.find(params[:city])
+    render json: { city: city }, status: :ok
+  end
+
   private
 
   def authenticate_user

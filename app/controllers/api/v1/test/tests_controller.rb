@@ -2,10 +2,6 @@ class Api::V1::Test::TestsController < ApplicationController
 
   before_action :authenticate_user
 
-  def index
-      puts user_name = @current_user.name
-  end
-
   private
 
   def authenticate_user
